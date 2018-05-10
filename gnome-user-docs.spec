@@ -4,7 +4,7 @@
 #
 Name     : gnome-user-docs
 Version  : 3.28.2
-Release  : 2
+Release  : 3
 URL      : https://download.gnome.org/sources/gnome-user-docs/3.28/gnome-user-docs-3.28.2.tar.xz
 Source0  : https://download.gnome.org/sources/gnome-user-docs/3.28/gnome-user-docs-3.28.2.tar.xz
 Summary  : No detailed summary available
