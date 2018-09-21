@@ -4,7 +4,7 @@
 #
 Name     : gnome-user-docs
 Version  : 3.30.0
-Release  : 4
+Release  : 5
 URL      : https://download.gnome.org/sources/gnome-user-docs/3.30/gnome-user-docs-3.30.0.tar.xz
 Source0  : https://download.gnome.org/sources/gnome-user-docs/3.30/gnome-user-docs-3.30.0.tar.xz
 Summary  : No detailed summary available
