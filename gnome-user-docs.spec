@@ -4,13 +4,14 @@
 #
 Name     : gnome-user-docs
 Version  : 3.32.0
-Release  : 8
+Release  : 9
 URL      : https://download.gnome.org/sources/gnome-user-docs/3.32/gnome-user-docs-3.32.0.tar.xz
 Source0  : https://download.gnome.org/sources/gnome-user-docs/3.32/gnome-user-docs-3.32.0.tar.xz
-Summary  : User documentation for GNOME
+Summary  : No detailed summary available
 Group    : Development/Tools
 License  : CC-BY-SA-3.0
 Requires: gnome-user-docs-license = %{version}-%{release}
+Requires: gnome-user-docs-doc
 BuildRequires : buildreq-gnome
 
 %description
@@ -45,7 +46,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552341364
+export SOURCE_DATE_EPOCH=1554137444
 export LDFLAGS="${LDFLAGS} -fno-lto"
 %configure --disable-static
 make  %{?_smp_mflags}
@@ -58,7 +59,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1552341364
+export SOURCE_DATE_EPOCH=1554137444
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gnome-user-docs
 cp COPYING %{buildroot}/usr/share/package-licenses/gnome-user-docs/COPYING
