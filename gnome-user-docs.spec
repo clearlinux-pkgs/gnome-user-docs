@@ -4,12 +4,13 @@
 #
 Name     : gnome-user-docs
 Version  : 43.0
-Release  : 33
+Release  : 34
 URL      : https://download.gnome.org/sources/gnome-user-docs/43/gnome-user-docs-43.0.tar.xz
 Source0  : https://download.gnome.org/sources/gnome-user-docs/43/gnome-user-docs-43.0.tar.xz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : CC-BY-SA-3.0
+Requires: gnome-user-docs-data = %{version}-%{release}
 Requires: gnome-user-docs-license = %{version}-%{release}
 Requires: gnome-user-docs-doc
 BuildRequires : buildreq-gnome
@@ -20,6 +21,14 @@ This package contains documents which are packaged together and
 shipped as gnome-user-docs in the core GNOME distribution. The
 documents are targeted for end-users and system administrators of
 GNOME and have general GNOME applicability.
+
+%package data
+Summary: data components for the gnome-user-docs package.
+Group: Data
+
+%description data
+data components for the gnome-user-docs package.
+
 
 %package doc
 Summary: doc components for the gnome-user-docs package.
@@ -46,7 +55,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1663953007
+export SOURCE_DATE_EPOCH=1664151707
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -66,13 +75,16 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1663953007
+export SOURCE_DATE_EPOCH=1664151707
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gnome-user-docs
 cp %{_builddir}/gnome-user-docs-%{version}/COPYING %{buildroot}/usr/share/package-licenses/gnome-user-docs/f646af8a0cc9f868b171677cfa1839d55de5c5cd || :
 %make_install
 
 %files
+%defattr(-,root,root,-)
+
+%files data
 %defattr(-,root,root,-)
 
 %files doc
