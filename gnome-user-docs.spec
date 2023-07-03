@@ -4,10 +4,10 @@
 # Using build pattern: configure
 #
 Name     : gnome-user-docs
-Version  : 44.1
-Release  : 37
-URL      : https://download.gnome.org/sources/gnome-user-docs/44/gnome-user-docs-44.1.tar.xz
-Source0  : https://download.gnome.org/sources/gnome-user-docs/44/gnome-user-docs-44.1.tar.xz
+Version  : 44.3
+Release  : 38
+URL      : https://download.gnome.org/sources/gnome-user-docs/44/gnome-user-docs-44.3.tar.xz
+Source0  : https://download.gnome.org/sources/gnome-user-docs/44/gnome-user-docs-44.3.tar.xz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : CC-BY-SA-3.0
@@ -43,39 +43,58 @@ license components for the gnome-user-docs package.
 
 
 %prep
-%setup -q -n gnome-user-docs-44.1
-cd %{_builddir}/gnome-user-docs-44.1
+%setup -q -n gnome-user-docs-44.3
+cd %{_builddir}/gnome-user-docs-44.3
+pushd ..
+cp -a gnome-user-docs-44.3 buildavx2
+popd
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1682359933
+export SOURCE_DATE_EPOCH=1688410364
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 %configure --disable-static
 make  %{?_smp_mflags}
 
+unset PKG_CONFIG_PATH
+pushd ../buildavx2/
+export CFLAGS="$CFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3"
+export CXXFLAGS="$CXXFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3"
+export FFLAGS="$FFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3"
+export FCFLAGS="$FCFLAGS -m64 -march=x86-64-v3"
+export LDFLAGS="$LDFLAGS -m64 -march=x86-64-v3"
+%configure --disable-static
+make  %{?_smp_mflags}
+popd
 %check
 export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 make %{?_smp_mflags} check
+cd ../buildavx2;
+make %{?_smp_mflags} check || :
 
 %install
-export SOURCE_DATE_EPOCH=1682359933
+export SOURCE_DATE_EPOCH=1688410364
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gnome-user-docs
 cp %{_builddir}/gnome-user-docs-%{version}/COPYING %{buildroot}/usr/share/package-licenses/gnome-user-docs/f646af8a0cc9f868b171677cfa1839d55de5c5cd || :
+pushd ../buildavx2/
+%make_install_v3
+popd
 %make_install
+/usr/bin/elf-move.py avx2 %{buildroot}-v3 %{buildroot} %{buildroot}/usr/share/clear/filemap/filemap-%{name}
 
 %files
 %defattr(-,root,root,-)
@@ -5328,6 +5347,63 @@ cp %{_builddir}/gnome-user-docs-%{version}/COPYING %{buildroot}/usr/share/packag
 /usr/share/help/fr/gnome-help/wacom-multi-monitor.page
 /usr/share/help/fr/gnome-help/wacom-stylus.page
 /usr/share/help/fr/gnome-help/wacom.page
+/usr/share/help/fr/system-admin-guide/appearance.page
+/usr/share/help/fr/system-admin-guide/autostart-applications.page
+/usr/share/help/fr/system-admin-guide/backgrounds-extra.page
+/usr/share/help/fr/system-admin-guide/dconf-custom-defaults.page
+/usr/share/help/fr/system-admin-guide/dconf-keyfiles.page
+/usr/share/help/fr/system-admin-guide/dconf-lockdown.page
+/usr/share/help/fr/system-admin-guide/dconf-nfs-home.page
+/usr/share/help/fr/system-admin-guide/dconf-profiles.page
+/usr/share/help/fr/system-admin-guide/dconf-snippets.xml
+/usr/share/help/fr/system-admin-guide/dconf.page
+/usr/share/help/fr/system-admin-guide/desktop-background.page
+/usr/share/help/fr/system-admin-guide/desktop-favorite-applications.page
+/usr/share/help/fr/system-admin-guide/desktop-lockscreen.page
+/usr/share/help/fr/system-admin-guide/desktop-shield.page
+/usr/share/help/fr/system-admin-guide/extensions-enable.page
+/usr/share/help/fr/system-admin-guide/extensions-lockdown.page
+/usr/share/help/fr/system-admin-guide/extensions.page
+/usr/share/help/fr/system-admin-guide/fonts-user.page
+/usr/share/help/fr/system-admin-guide/fonts.page
+/usr/share/help/fr/system-admin-guide/gsettings-browse.page
+/usr/share/help/fr/system-admin-guide/index.page
+/usr/share/help/fr/system-admin-guide/keyboard-compose-key.page
+/usr/share/help/fr/system-admin-guide/keyboard-layout.page
+/usr/share/help/fr/system-admin-guide/legal.xml
+/usr/share/help/fr/system-admin-guide/lockdown-command-line.page
+/usr/share/help/fr/system-admin-guide/lockdown-file-saving.page
+/usr/share/help/fr/system-admin-guide/lockdown-logout.page
+/usr/share/help/fr/system-admin-guide/lockdown-online-accounts.page
+/usr/share/help/fr/system-admin-guide/lockdown-printing.page
+/usr/share/help/fr/system-admin-guide/lockdown-repartitioning.page
+/usr/share/help/fr/system-admin-guide/lockdown-single-app-mode.page
+/usr/share/help/fr/system-admin-guide/login-automatic.page
+/usr/share/help/fr/system-admin-guide/login-banner.page
+/usr/share/help/fr/system-admin-guide/login-enterprise.page
+/usr/share/help/fr/system-admin-guide/login-fingerprint.page
+/usr/share/help/fr/system-admin-guide/login-logo.page
+/usr/share/help/fr/system-admin-guide/login-userlist-disable.page
+/usr/share/help/fr/system-admin-guide/login.page
+/usr/share/help/fr/system-admin-guide/logout-automatic.page
+/usr/share/help/fr/system-admin-guide/mime-types-application-user.page
+/usr/share/help/fr/system-admin-guide/mime-types-application.page
+/usr/share/help/fr/system-admin-guide/mime-types-custom-user.page
+/usr/share/help/fr/system-admin-guide/mime-types-custom.page
+/usr/share/help/fr/system-admin-guide/mime-types.page
+/usr/share/help/fr/system-admin-guide/network-server-list.page
+/usr/share/help/fr/system-admin-guide/network-vpn.page
+/usr/share/help/fr/system-admin-guide/network.page
+/usr/share/help/fr/system-admin-guide/overrides.page
+/usr/share/help/fr/system-admin-guide/power-dim-screen.page
+/usr/share/help/fr/system-admin-guide/processes.page
+/usr/share/help/fr/system-admin-guide/session-custom.page
+/usr/share/help/fr/system-admin-guide/session-debug.page
+/usr/share/help/fr/system-admin-guide/session-user.page
+/usr/share/help/fr/system-admin-guide/setup.page
+/usr/share/help/fr/system-admin-guide/software.page
+/usr/share/help/fr/system-admin-guide/sundry.page
+/usr/share/help/fr/system-admin-guide/user-settings.page
 /usr/share/help/gl/gnome-help/a11y-bouncekeys.page
 /usr/share/help/gl/gnome-help/a11y-braille.page
 /usr/share/help/gl/gnome-help/a11y-contrast.page
