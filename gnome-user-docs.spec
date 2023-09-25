@@ -4,10 +4,10 @@
 # Using build pattern: configure
 #
 Name     : gnome-user-docs
-Version  : 44.3
-Release  : 38
-URL      : https://download.gnome.org/sources/gnome-user-docs/44/gnome-user-docs-44.3.tar.xz
-Source0  : https://download.gnome.org/sources/gnome-user-docs/44/gnome-user-docs-44.3.tar.xz
+Version  : 45.0
+Release  : 39
+URL      : https://download.gnome.org/sources/gnome-user-docs/45/gnome-user-docs-45.0.tar.xz
+Source0  : https://download.gnome.org/sources/gnome-user-docs/45/gnome-user-docs-45.0.tar.xz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : CC-BY-SA-3.0
@@ -43,10 +43,10 @@ license components for the gnome-user-docs package.
 
 
 %prep
-%setup -q -n gnome-user-docs-44.3
-cd %{_builddir}/gnome-user-docs-44.3
+%setup -q -n gnome-user-docs-45.0
+cd %{_builddir}/gnome-user-docs-45.0
 pushd ..
-cp -a gnome-user-docs-44.3 buildavx2
+cp -a gnome-user-docs-45.0 buildavx2
 popd
 
 %build
@@ -54,7 +54,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1688410364
+export SOURCE_DATE_EPOCH=1695685796
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -86,7 +86,7 @@ cd ../buildavx2;
 make %{?_smp_mflags} check || :
 
 %install
-export SOURCE_DATE_EPOCH=1688410364
+export SOURCE_DATE_EPOCH=1695685796
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gnome-user-docs
 cp %{_builddir}/gnome-user-docs-%{version}/COPYING %{buildroot}/usr/share/package-licenses/gnome-user-docs/f646af8a0cc9f868b171677cfa1839d55de5c5cd || :
@@ -217,9 +217,9 @@ popd
 /usr/share/help/C/gnome-help/figures/classic-topbar-network-wireless-acquiring.svg
 /usr/share/help/C/gnome-help/figures/classic-topbar-network-wireless-connected.svg
 /usr/share/help/C/gnome-help/figures/classic-topbar-network-wireless-no-route.svg
-/usr/share/help/C/gnome-help/figures/classic-topbar-network-wireless-strength-excellent.svg
-/usr/share/help/C/gnome-help/figures/classic-topbar-network-wireless-strength-none.svg
-/usr/share/help/C/gnome-help/figures/classic-topbar-network-wireless-strength.svg
+/usr/share/help/C/gnome-help/figures/classic-topbar-network-wireless-signal-excellent.svg
+/usr/share/help/C/gnome-help/figures/classic-topbar-network-wireless-signal-none.svg
+/usr/share/help/C/gnome-help/figures/classic-topbar-network-wireless-signal.svg
 /usr/share/help/C/gnome-help/figures/classic-topbar-night-light.svg
 /usr/share/help/C/gnome-help/figures/classic-topbar-pointer.svg
 /usr/share/help/C/gnome-help/figures/classic-topbar-screen-shared.svg
@@ -260,7 +260,6 @@ popd
 /usr/share/help/C/gnome-help/figures/net-wired-ethernet-diagram.svg
 /usr/share/help/C/gnome-help/figures/network-wired-symbolic.svg
 /usr/share/help/C/gnome-help/figures/network-wireless-disabled-symbolic.svg
-/usr/share/help/C/gnome-help/figures/preferences-desktop-accessibility-symbolic.svg
 /usr/share/help/C/gnome-help/figures/printing-select.png
 /usr/share/help/C/gnome-help/figures/ps-button.svg
 /usr/share/help/C/gnome-help/figures/ps-create.svg
@@ -268,8 +267,6 @@ popd
 /usr/share/help/C/gnome-help/figures/rotation-locked-symbolic.svg
 /usr/share/help/C/gnome-help/figures/screenshot-tool.png
 /usr/share/help/C/gnome-help/figures/shell-activities-dash.png
-/usr/share/help/C/gnome-help/figures/shell-appmenu-classic.png
-/usr/share/help/C/gnome-help/figures/shell-appmenu-shell.png
 /usr/share/help/C/gnome-help/figures/shell-appts-classic.png
 /usr/share/help/C/gnome-help/figures/shell-appts.png
 /usr/share/help/C/gnome-help/figures/shell-exit-classic-expanded.png
@@ -319,9 +316,9 @@ popd
 /usr/share/help/C/gnome-help/figures/topbar-network-wireless-acquiring.svg
 /usr/share/help/C/gnome-help/figures/topbar-network-wireless-connected.svg
 /usr/share/help/C/gnome-help/figures/topbar-network-wireless-no-route.svg
-/usr/share/help/C/gnome-help/figures/topbar-network-wireless-strength-excellent.svg
-/usr/share/help/C/gnome-help/figures/topbar-network-wireless-strength-none.svg
-/usr/share/help/C/gnome-help/figures/topbar-network-wireless-strength.svg
+/usr/share/help/C/gnome-help/figures/topbar-network-wireless-signal-excellent.svg
+/usr/share/help/C/gnome-help/figures/topbar-network-wireless-signal-none.svg
+/usr/share/help/C/gnome-help/figures/topbar-network-wireless-signal.svg
 /usr/share/help/C/gnome-help/figures/topbar-night-light.svg
 /usr/share/help/C/gnome-help/figures/topbar-pointer.svg
 /usr/share/help/C/gnome-help/figures/topbar-screen-shared.svg
@@ -367,7 +364,7 @@ popd
 /usr/share/help/C/gnome-help/hardware-problems-graphics.page
 /usr/share/help/C/gnome-help/hardware.page
 /usr/share/help/C/gnome-help/help-irc.page
-/usr/share/help/C/gnome-help/help-mailing-list.page
+/usr/share/help/C/gnome-help/help-matrix.page
 /usr/share/help/C/gnome-help/index.page
 /usr/share/help/C/gnome-help/keyboard-cursor-blink.page
 /usr/share/help/C/gnome-help/keyboard-key-menu.page
@@ -725,9 +722,9 @@ popd
 /usr/share/help/as/gnome-help/figures/classic-topbar-network-wireless-acquiring.svg
 /usr/share/help/as/gnome-help/figures/classic-topbar-network-wireless-connected.svg
 /usr/share/help/as/gnome-help/figures/classic-topbar-network-wireless-no-route.svg
-/usr/share/help/as/gnome-help/figures/classic-topbar-network-wireless-strength-excellent.svg
-/usr/share/help/as/gnome-help/figures/classic-topbar-network-wireless-strength-none.svg
-/usr/share/help/as/gnome-help/figures/classic-topbar-network-wireless-strength.svg
+/usr/share/help/as/gnome-help/figures/classic-topbar-network-wireless-signal-excellent.svg
+/usr/share/help/as/gnome-help/figures/classic-topbar-network-wireless-signal-none.svg
+/usr/share/help/as/gnome-help/figures/classic-topbar-network-wireless-signal.svg
 /usr/share/help/as/gnome-help/figures/classic-topbar-night-light.svg
 /usr/share/help/as/gnome-help/figures/classic-topbar-pointer.svg
 /usr/share/help/as/gnome-help/figures/classic-topbar-screen-shared.svg
@@ -768,7 +765,6 @@ popd
 /usr/share/help/as/gnome-help/figures/net-wired-ethernet-diagram.svg
 /usr/share/help/as/gnome-help/figures/network-wired-symbolic.svg
 /usr/share/help/as/gnome-help/figures/network-wireless-disabled-symbolic.svg
-/usr/share/help/as/gnome-help/figures/preferences-desktop-accessibility-symbolic.svg
 /usr/share/help/as/gnome-help/figures/printing-select.png
 /usr/share/help/as/gnome-help/figures/ps-button.svg
 /usr/share/help/as/gnome-help/figures/ps-create.svg
@@ -776,8 +772,6 @@ popd
 /usr/share/help/as/gnome-help/figures/rotation-locked-symbolic.svg
 /usr/share/help/as/gnome-help/figures/screenshot-tool.png
 /usr/share/help/as/gnome-help/figures/shell-activities-dash.png
-/usr/share/help/as/gnome-help/figures/shell-appmenu-classic.png
-/usr/share/help/as/gnome-help/figures/shell-appmenu-shell.png
 /usr/share/help/as/gnome-help/figures/shell-appts-classic.png
 /usr/share/help/as/gnome-help/figures/shell-appts.png
 /usr/share/help/as/gnome-help/figures/shell-exit-classic-expanded.png
@@ -827,9 +821,9 @@ popd
 /usr/share/help/as/gnome-help/figures/topbar-network-wireless-acquiring.svg
 /usr/share/help/as/gnome-help/figures/topbar-network-wireless-connected.svg
 /usr/share/help/as/gnome-help/figures/topbar-network-wireless-no-route.svg
-/usr/share/help/as/gnome-help/figures/topbar-network-wireless-strength-excellent.svg
-/usr/share/help/as/gnome-help/figures/topbar-network-wireless-strength-none.svg
-/usr/share/help/as/gnome-help/figures/topbar-network-wireless-strength.svg
+/usr/share/help/as/gnome-help/figures/topbar-network-wireless-signal-excellent.svg
+/usr/share/help/as/gnome-help/figures/topbar-network-wireless-signal-none.svg
+/usr/share/help/as/gnome-help/figures/topbar-network-wireless-signal.svg
 /usr/share/help/as/gnome-help/figures/topbar-night-light.svg
 /usr/share/help/as/gnome-help/figures/topbar-pointer.svg
 /usr/share/help/as/gnome-help/figures/topbar-screen-shared.svg
@@ -875,7 +869,7 @@ popd
 /usr/share/help/as/gnome-help/hardware-problems-graphics.page
 /usr/share/help/as/gnome-help/hardware.page
 /usr/share/help/as/gnome-help/help-irc.page
-/usr/share/help/as/gnome-help/help-mailing-list.page
+/usr/share/help/as/gnome-help/help-matrix.page
 /usr/share/help/as/gnome-help/index.page
 /usr/share/help/as/gnome-help/keyboard-cursor-blink.page
 /usr/share/help/as/gnome-help/keyboard-key-menu.page
@@ -1176,9 +1170,9 @@ popd
 /usr/share/help/ca/gnome-help/figures/classic-topbar-network-wireless-acquiring.svg
 /usr/share/help/ca/gnome-help/figures/classic-topbar-network-wireless-connected.svg
 /usr/share/help/ca/gnome-help/figures/classic-topbar-network-wireless-no-route.svg
-/usr/share/help/ca/gnome-help/figures/classic-topbar-network-wireless-strength-excellent.svg
-/usr/share/help/ca/gnome-help/figures/classic-topbar-network-wireless-strength-none.svg
-/usr/share/help/ca/gnome-help/figures/classic-topbar-network-wireless-strength.svg
+/usr/share/help/ca/gnome-help/figures/classic-topbar-network-wireless-signal-excellent.svg
+/usr/share/help/ca/gnome-help/figures/classic-topbar-network-wireless-signal-none.svg
+/usr/share/help/ca/gnome-help/figures/classic-topbar-network-wireless-signal.svg
 /usr/share/help/ca/gnome-help/figures/classic-topbar-night-light.svg
 /usr/share/help/ca/gnome-help/figures/classic-topbar-pointer.svg
 /usr/share/help/ca/gnome-help/figures/classic-topbar-screen-shared.svg
@@ -1219,7 +1213,6 @@ popd
 /usr/share/help/ca/gnome-help/figures/net-wired-ethernet-diagram.svg
 /usr/share/help/ca/gnome-help/figures/network-wired-symbolic.svg
 /usr/share/help/ca/gnome-help/figures/network-wireless-disabled-symbolic.svg
-/usr/share/help/ca/gnome-help/figures/preferences-desktop-accessibility-symbolic.svg
 /usr/share/help/ca/gnome-help/figures/printing-select.png
 /usr/share/help/ca/gnome-help/figures/ps-button.svg
 /usr/share/help/ca/gnome-help/figures/ps-create.svg
@@ -1227,8 +1220,6 @@ popd
 /usr/share/help/ca/gnome-help/figures/rotation-locked-symbolic.svg
 /usr/share/help/ca/gnome-help/figures/screenshot-tool.png
 /usr/share/help/ca/gnome-help/figures/shell-activities-dash.png
-/usr/share/help/ca/gnome-help/figures/shell-appmenu-classic.png
-/usr/share/help/ca/gnome-help/figures/shell-appmenu-shell.png
 /usr/share/help/ca/gnome-help/figures/shell-appts-classic.png
 /usr/share/help/ca/gnome-help/figures/shell-appts.png
 /usr/share/help/ca/gnome-help/figures/shell-exit-classic-expanded.png
@@ -1278,9 +1269,9 @@ popd
 /usr/share/help/ca/gnome-help/figures/topbar-network-wireless-acquiring.svg
 /usr/share/help/ca/gnome-help/figures/topbar-network-wireless-connected.svg
 /usr/share/help/ca/gnome-help/figures/topbar-network-wireless-no-route.svg
-/usr/share/help/ca/gnome-help/figures/topbar-network-wireless-strength-excellent.svg
-/usr/share/help/ca/gnome-help/figures/topbar-network-wireless-strength-none.svg
-/usr/share/help/ca/gnome-help/figures/topbar-network-wireless-strength.svg
+/usr/share/help/ca/gnome-help/figures/topbar-network-wireless-signal-excellent.svg
+/usr/share/help/ca/gnome-help/figures/topbar-network-wireless-signal-none.svg
+/usr/share/help/ca/gnome-help/figures/topbar-network-wireless-signal.svg
 /usr/share/help/ca/gnome-help/figures/topbar-night-light.svg
 /usr/share/help/ca/gnome-help/figures/topbar-pointer.svg
 /usr/share/help/ca/gnome-help/figures/topbar-screen-shared.svg
@@ -1326,7 +1317,7 @@ popd
 /usr/share/help/ca/gnome-help/hardware-problems-graphics.page
 /usr/share/help/ca/gnome-help/hardware.page
 /usr/share/help/ca/gnome-help/help-irc.page
-/usr/share/help/ca/gnome-help/help-mailing-list.page
+/usr/share/help/ca/gnome-help/help-matrix.page
 /usr/share/help/ca/gnome-help/index.page
 /usr/share/help/ca/gnome-help/keyboard-cursor-blink.page
 /usr/share/help/ca/gnome-help/keyboard-key-menu.page
@@ -1684,9 +1675,9 @@ popd
 /usr/share/help/cs/gnome-help/figures/classic-topbar-network-wireless-acquiring.svg
 /usr/share/help/cs/gnome-help/figures/classic-topbar-network-wireless-connected.svg
 /usr/share/help/cs/gnome-help/figures/classic-topbar-network-wireless-no-route.svg
-/usr/share/help/cs/gnome-help/figures/classic-topbar-network-wireless-strength-excellent.svg
-/usr/share/help/cs/gnome-help/figures/classic-topbar-network-wireless-strength-none.svg
-/usr/share/help/cs/gnome-help/figures/classic-topbar-network-wireless-strength.svg
+/usr/share/help/cs/gnome-help/figures/classic-topbar-network-wireless-signal-excellent.svg
+/usr/share/help/cs/gnome-help/figures/classic-topbar-network-wireless-signal-none.svg
+/usr/share/help/cs/gnome-help/figures/classic-topbar-network-wireless-signal.svg
 /usr/share/help/cs/gnome-help/figures/classic-topbar-night-light.svg
 /usr/share/help/cs/gnome-help/figures/classic-topbar-pointer.svg
 /usr/share/help/cs/gnome-help/figures/classic-topbar-screen-shared.svg
@@ -1727,7 +1718,6 @@ popd
 /usr/share/help/cs/gnome-help/figures/net-wired-ethernet-diagram.svg
 /usr/share/help/cs/gnome-help/figures/network-wired-symbolic.svg
 /usr/share/help/cs/gnome-help/figures/network-wireless-disabled-symbolic.svg
-/usr/share/help/cs/gnome-help/figures/preferences-desktop-accessibility-symbolic.svg
 /usr/share/help/cs/gnome-help/figures/printing-select.png
 /usr/share/help/cs/gnome-help/figures/ps-button.svg
 /usr/share/help/cs/gnome-help/figures/ps-create.svg
@@ -1735,8 +1725,6 @@ popd
 /usr/share/help/cs/gnome-help/figures/rotation-locked-symbolic.svg
 /usr/share/help/cs/gnome-help/figures/screenshot-tool.png
 /usr/share/help/cs/gnome-help/figures/shell-activities-dash.png
-/usr/share/help/cs/gnome-help/figures/shell-appmenu-classic.png
-/usr/share/help/cs/gnome-help/figures/shell-appmenu-shell.png
 /usr/share/help/cs/gnome-help/figures/shell-appts-classic.png
 /usr/share/help/cs/gnome-help/figures/shell-appts.png
 /usr/share/help/cs/gnome-help/figures/shell-exit-classic-expanded.png
@@ -1786,9 +1774,9 @@ popd
 /usr/share/help/cs/gnome-help/figures/topbar-network-wireless-acquiring.svg
 /usr/share/help/cs/gnome-help/figures/topbar-network-wireless-connected.svg
 /usr/share/help/cs/gnome-help/figures/topbar-network-wireless-no-route.svg
-/usr/share/help/cs/gnome-help/figures/topbar-network-wireless-strength-excellent.svg
-/usr/share/help/cs/gnome-help/figures/topbar-network-wireless-strength-none.svg
-/usr/share/help/cs/gnome-help/figures/topbar-network-wireless-strength.svg
+/usr/share/help/cs/gnome-help/figures/topbar-network-wireless-signal-excellent.svg
+/usr/share/help/cs/gnome-help/figures/topbar-network-wireless-signal-none.svg
+/usr/share/help/cs/gnome-help/figures/topbar-network-wireless-signal.svg
 /usr/share/help/cs/gnome-help/figures/topbar-night-light.svg
 /usr/share/help/cs/gnome-help/figures/topbar-pointer.svg
 /usr/share/help/cs/gnome-help/figures/topbar-screen-shared.svg
@@ -1834,7 +1822,7 @@ popd
 /usr/share/help/cs/gnome-help/hardware-problems-graphics.page
 /usr/share/help/cs/gnome-help/hardware.page
 /usr/share/help/cs/gnome-help/help-irc.page
-/usr/share/help/cs/gnome-help/help-mailing-list.page
+/usr/share/help/cs/gnome-help/help-matrix.page
 /usr/share/help/cs/gnome-help/index.page
 /usr/share/help/cs/gnome-help/keyboard-cursor-blink.page
 /usr/share/help/cs/gnome-help/keyboard-key-menu.page
@@ -2192,9 +2180,9 @@ popd
 /usr/share/help/da/gnome-help/figures/classic-topbar-network-wireless-acquiring.svg
 /usr/share/help/da/gnome-help/figures/classic-topbar-network-wireless-connected.svg
 /usr/share/help/da/gnome-help/figures/classic-topbar-network-wireless-no-route.svg
-/usr/share/help/da/gnome-help/figures/classic-topbar-network-wireless-strength-excellent.svg
-/usr/share/help/da/gnome-help/figures/classic-topbar-network-wireless-strength-none.svg
-/usr/share/help/da/gnome-help/figures/classic-topbar-network-wireless-strength.svg
+/usr/share/help/da/gnome-help/figures/classic-topbar-network-wireless-signal-excellent.svg
+/usr/share/help/da/gnome-help/figures/classic-topbar-network-wireless-signal-none.svg
+/usr/share/help/da/gnome-help/figures/classic-topbar-network-wireless-signal.svg
 /usr/share/help/da/gnome-help/figures/classic-topbar-night-light.svg
 /usr/share/help/da/gnome-help/figures/classic-topbar-pointer.svg
 /usr/share/help/da/gnome-help/figures/classic-topbar-screen-shared.svg
@@ -2235,7 +2223,6 @@ popd
 /usr/share/help/da/gnome-help/figures/net-wired-ethernet-diagram.svg
 /usr/share/help/da/gnome-help/figures/network-wired-symbolic.svg
 /usr/share/help/da/gnome-help/figures/network-wireless-disabled-symbolic.svg
-/usr/share/help/da/gnome-help/figures/preferences-desktop-accessibility-symbolic.svg
 /usr/share/help/da/gnome-help/figures/printing-select.png
 /usr/share/help/da/gnome-help/figures/ps-button.svg
 /usr/share/help/da/gnome-help/figures/ps-create.svg
@@ -2243,8 +2230,6 @@ popd
 /usr/share/help/da/gnome-help/figures/rotation-locked-symbolic.svg
 /usr/share/help/da/gnome-help/figures/screenshot-tool.png
 /usr/share/help/da/gnome-help/figures/shell-activities-dash.png
-/usr/share/help/da/gnome-help/figures/shell-appmenu-classic.png
-/usr/share/help/da/gnome-help/figures/shell-appmenu-shell.png
 /usr/share/help/da/gnome-help/figures/shell-appts-classic.png
 /usr/share/help/da/gnome-help/figures/shell-appts.png
 /usr/share/help/da/gnome-help/figures/shell-exit-classic-expanded.png
@@ -2294,9 +2279,9 @@ popd
 /usr/share/help/da/gnome-help/figures/topbar-network-wireless-acquiring.svg
 /usr/share/help/da/gnome-help/figures/topbar-network-wireless-connected.svg
 /usr/share/help/da/gnome-help/figures/topbar-network-wireless-no-route.svg
-/usr/share/help/da/gnome-help/figures/topbar-network-wireless-strength-excellent.svg
-/usr/share/help/da/gnome-help/figures/topbar-network-wireless-strength-none.svg
-/usr/share/help/da/gnome-help/figures/topbar-network-wireless-strength.svg
+/usr/share/help/da/gnome-help/figures/topbar-network-wireless-signal-excellent.svg
+/usr/share/help/da/gnome-help/figures/topbar-network-wireless-signal-none.svg
+/usr/share/help/da/gnome-help/figures/topbar-network-wireless-signal.svg
 /usr/share/help/da/gnome-help/figures/topbar-night-light.svg
 /usr/share/help/da/gnome-help/figures/topbar-pointer.svg
 /usr/share/help/da/gnome-help/figures/topbar-screen-shared.svg
@@ -2342,7 +2327,7 @@ popd
 /usr/share/help/da/gnome-help/hardware-problems-graphics.page
 /usr/share/help/da/gnome-help/hardware.page
 /usr/share/help/da/gnome-help/help-irc.page
-/usr/share/help/da/gnome-help/help-mailing-list.page
+/usr/share/help/da/gnome-help/help-matrix.page
 /usr/share/help/da/gnome-help/index.page
 /usr/share/help/da/gnome-help/keyboard-cursor-blink.page
 /usr/share/help/da/gnome-help/keyboard-key-menu.page
@@ -2643,9 +2628,9 @@ popd
 /usr/share/help/de/gnome-help/figures/classic-topbar-network-wireless-acquiring.svg
 /usr/share/help/de/gnome-help/figures/classic-topbar-network-wireless-connected.svg
 /usr/share/help/de/gnome-help/figures/classic-topbar-network-wireless-no-route.svg
-/usr/share/help/de/gnome-help/figures/classic-topbar-network-wireless-strength-excellent.svg
-/usr/share/help/de/gnome-help/figures/classic-topbar-network-wireless-strength-none.svg
-/usr/share/help/de/gnome-help/figures/classic-topbar-network-wireless-strength.svg
+/usr/share/help/de/gnome-help/figures/classic-topbar-network-wireless-signal-excellent.svg
+/usr/share/help/de/gnome-help/figures/classic-topbar-network-wireless-signal-none.svg
+/usr/share/help/de/gnome-help/figures/classic-topbar-network-wireless-signal.svg
 /usr/share/help/de/gnome-help/figures/classic-topbar-night-light.svg
 /usr/share/help/de/gnome-help/figures/classic-topbar-pointer.svg
 /usr/share/help/de/gnome-help/figures/classic-topbar-screen-shared.svg
@@ -2686,7 +2671,6 @@ popd
 /usr/share/help/de/gnome-help/figures/net-wired-ethernet-diagram.svg
 /usr/share/help/de/gnome-help/figures/network-wired-symbolic.svg
 /usr/share/help/de/gnome-help/figures/network-wireless-disabled-symbolic.svg
-/usr/share/help/de/gnome-help/figures/preferences-desktop-accessibility-symbolic.svg
 /usr/share/help/de/gnome-help/figures/printing-select.png
 /usr/share/help/de/gnome-help/figures/ps-button.svg
 /usr/share/help/de/gnome-help/figures/ps-create.svg
@@ -2694,8 +2678,6 @@ popd
 /usr/share/help/de/gnome-help/figures/rotation-locked-symbolic.svg
 /usr/share/help/de/gnome-help/figures/screenshot-tool.png
 /usr/share/help/de/gnome-help/figures/shell-activities-dash.png
-/usr/share/help/de/gnome-help/figures/shell-appmenu-classic.png
-/usr/share/help/de/gnome-help/figures/shell-appmenu-shell.png
 /usr/share/help/de/gnome-help/figures/shell-appts-classic.png
 /usr/share/help/de/gnome-help/figures/shell-appts.png
 /usr/share/help/de/gnome-help/figures/shell-exit-classic-expanded.png
@@ -2745,9 +2727,9 @@ popd
 /usr/share/help/de/gnome-help/figures/topbar-network-wireless-acquiring.svg
 /usr/share/help/de/gnome-help/figures/topbar-network-wireless-connected.svg
 /usr/share/help/de/gnome-help/figures/topbar-network-wireless-no-route.svg
-/usr/share/help/de/gnome-help/figures/topbar-network-wireless-strength-excellent.svg
-/usr/share/help/de/gnome-help/figures/topbar-network-wireless-strength-none.svg
-/usr/share/help/de/gnome-help/figures/topbar-network-wireless-strength.svg
+/usr/share/help/de/gnome-help/figures/topbar-network-wireless-signal-excellent.svg
+/usr/share/help/de/gnome-help/figures/topbar-network-wireless-signal-none.svg
+/usr/share/help/de/gnome-help/figures/topbar-network-wireless-signal.svg
 /usr/share/help/de/gnome-help/figures/topbar-night-light.svg
 /usr/share/help/de/gnome-help/figures/topbar-pointer.svg
 /usr/share/help/de/gnome-help/figures/topbar-screen-shared.svg
@@ -2793,7 +2775,7 @@ popd
 /usr/share/help/de/gnome-help/hardware-problems-graphics.page
 /usr/share/help/de/gnome-help/hardware.page
 /usr/share/help/de/gnome-help/help-irc.page
-/usr/share/help/de/gnome-help/help-mailing-list.page
+/usr/share/help/de/gnome-help/help-matrix.page
 /usr/share/help/de/gnome-help/index.page
 /usr/share/help/de/gnome-help/keyboard-cursor-blink.page
 /usr/share/help/de/gnome-help/keyboard-key-menu.page
@@ -3151,9 +3133,9 @@ popd
 /usr/share/help/el/gnome-help/figures/classic-topbar-network-wireless-acquiring.svg
 /usr/share/help/el/gnome-help/figures/classic-topbar-network-wireless-connected.svg
 /usr/share/help/el/gnome-help/figures/classic-topbar-network-wireless-no-route.svg
-/usr/share/help/el/gnome-help/figures/classic-topbar-network-wireless-strength-excellent.svg
-/usr/share/help/el/gnome-help/figures/classic-topbar-network-wireless-strength-none.svg
-/usr/share/help/el/gnome-help/figures/classic-topbar-network-wireless-strength.svg
+/usr/share/help/el/gnome-help/figures/classic-topbar-network-wireless-signal-excellent.svg
+/usr/share/help/el/gnome-help/figures/classic-topbar-network-wireless-signal-none.svg
+/usr/share/help/el/gnome-help/figures/classic-topbar-network-wireless-signal.svg
 /usr/share/help/el/gnome-help/figures/classic-topbar-night-light.svg
 /usr/share/help/el/gnome-help/figures/classic-topbar-pointer.svg
 /usr/share/help/el/gnome-help/figures/classic-topbar-screen-shared.svg
@@ -3194,7 +3176,6 @@ popd
 /usr/share/help/el/gnome-help/figures/net-wired-ethernet-diagram.svg
 /usr/share/help/el/gnome-help/figures/network-wired-symbolic.svg
 /usr/share/help/el/gnome-help/figures/network-wireless-disabled-symbolic.svg
-/usr/share/help/el/gnome-help/figures/preferences-desktop-accessibility-symbolic.svg
 /usr/share/help/el/gnome-help/figures/printing-select.png
 /usr/share/help/el/gnome-help/figures/ps-button.svg
 /usr/share/help/el/gnome-help/figures/ps-create.svg
@@ -3202,8 +3183,6 @@ popd
 /usr/share/help/el/gnome-help/figures/rotation-locked-symbolic.svg
 /usr/share/help/el/gnome-help/figures/screenshot-tool.png
 /usr/share/help/el/gnome-help/figures/shell-activities-dash.png
-/usr/share/help/el/gnome-help/figures/shell-appmenu-classic.png
-/usr/share/help/el/gnome-help/figures/shell-appmenu-shell.png
 /usr/share/help/el/gnome-help/figures/shell-appts-classic.png
 /usr/share/help/el/gnome-help/figures/shell-appts.png
 /usr/share/help/el/gnome-help/figures/shell-exit-classic-expanded.png
@@ -3253,9 +3232,9 @@ popd
 /usr/share/help/el/gnome-help/figures/topbar-network-wireless-acquiring.svg
 /usr/share/help/el/gnome-help/figures/topbar-network-wireless-connected.svg
 /usr/share/help/el/gnome-help/figures/topbar-network-wireless-no-route.svg
-/usr/share/help/el/gnome-help/figures/topbar-network-wireless-strength-excellent.svg
-/usr/share/help/el/gnome-help/figures/topbar-network-wireless-strength-none.svg
-/usr/share/help/el/gnome-help/figures/topbar-network-wireless-strength.svg
+/usr/share/help/el/gnome-help/figures/topbar-network-wireless-signal-excellent.svg
+/usr/share/help/el/gnome-help/figures/topbar-network-wireless-signal-none.svg
+/usr/share/help/el/gnome-help/figures/topbar-network-wireless-signal.svg
 /usr/share/help/el/gnome-help/figures/topbar-night-light.svg
 /usr/share/help/el/gnome-help/figures/topbar-pointer.svg
 /usr/share/help/el/gnome-help/figures/topbar-screen-shared.svg
@@ -3301,7 +3280,7 @@ popd
 /usr/share/help/el/gnome-help/hardware-problems-graphics.page
 /usr/share/help/el/gnome-help/hardware.page
 /usr/share/help/el/gnome-help/help-irc.page
-/usr/share/help/el/gnome-help/help-mailing-list.page
+/usr/share/help/el/gnome-help/help-matrix.page
 /usr/share/help/el/gnome-help/index.page
 /usr/share/help/el/gnome-help/keyboard-cursor-blink.page
 /usr/share/help/el/gnome-help/keyboard-key-menu.page
@@ -3602,9 +3581,9 @@ popd
 /usr/share/help/es/gnome-help/figures/classic-topbar-network-wireless-acquiring.svg
 /usr/share/help/es/gnome-help/figures/classic-topbar-network-wireless-connected.svg
 /usr/share/help/es/gnome-help/figures/classic-topbar-network-wireless-no-route.svg
-/usr/share/help/es/gnome-help/figures/classic-topbar-network-wireless-strength-excellent.svg
-/usr/share/help/es/gnome-help/figures/classic-topbar-network-wireless-strength-none.svg
-/usr/share/help/es/gnome-help/figures/classic-topbar-network-wireless-strength.svg
+/usr/share/help/es/gnome-help/figures/classic-topbar-network-wireless-signal-excellent.svg
+/usr/share/help/es/gnome-help/figures/classic-topbar-network-wireless-signal-none.svg
+/usr/share/help/es/gnome-help/figures/classic-topbar-network-wireless-signal.svg
 /usr/share/help/es/gnome-help/figures/classic-topbar-night-light.svg
 /usr/share/help/es/gnome-help/figures/classic-topbar-pointer.svg
 /usr/share/help/es/gnome-help/figures/classic-topbar-screen-shared.svg
@@ -3645,7 +3624,6 @@ popd
 /usr/share/help/es/gnome-help/figures/net-wired-ethernet-diagram.svg
 /usr/share/help/es/gnome-help/figures/network-wired-symbolic.svg
 /usr/share/help/es/gnome-help/figures/network-wireless-disabled-symbolic.svg
-/usr/share/help/es/gnome-help/figures/preferences-desktop-accessibility-symbolic.svg
 /usr/share/help/es/gnome-help/figures/printing-select.png
 /usr/share/help/es/gnome-help/figures/ps-button.svg
 /usr/share/help/es/gnome-help/figures/ps-create.svg
@@ -3653,8 +3631,6 @@ popd
 /usr/share/help/es/gnome-help/figures/rotation-locked-symbolic.svg
 /usr/share/help/es/gnome-help/figures/screenshot-tool.png
 /usr/share/help/es/gnome-help/figures/shell-activities-dash.png
-/usr/share/help/es/gnome-help/figures/shell-appmenu-classic.png
-/usr/share/help/es/gnome-help/figures/shell-appmenu-shell.png
 /usr/share/help/es/gnome-help/figures/shell-appts-classic.png
 /usr/share/help/es/gnome-help/figures/shell-appts.png
 /usr/share/help/es/gnome-help/figures/shell-exit-classic-expanded.png
@@ -3704,9 +3680,9 @@ popd
 /usr/share/help/es/gnome-help/figures/topbar-network-wireless-acquiring.svg
 /usr/share/help/es/gnome-help/figures/topbar-network-wireless-connected.svg
 /usr/share/help/es/gnome-help/figures/topbar-network-wireless-no-route.svg
-/usr/share/help/es/gnome-help/figures/topbar-network-wireless-strength-excellent.svg
-/usr/share/help/es/gnome-help/figures/topbar-network-wireless-strength-none.svg
-/usr/share/help/es/gnome-help/figures/topbar-network-wireless-strength.svg
+/usr/share/help/es/gnome-help/figures/topbar-network-wireless-signal-excellent.svg
+/usr/share/help/es/gnome-help/figures/topbar-network-wireless-signal-none.svg
+/usr/share/help/es/gnome-help/figures/topbar-network-wireless-signal.svg
 /usr/share/help/es/gnome-help/figures/topbar-night-light.svg
 /usr/share/help/es/gnome-help/figures/topbar-pointer.svg
 /usr/share/help/es/gnome-help/figures/topbar-screen-shared.svg
@@ -3752,7 +3728,7 @@ popd
 /usr/share/help/es/gnome-help/hardware-problems-graphics.page
 /usr/share/help/es/gnome-help/hardware.page
 /usr/share/help/es/gnome-help/help-irc.page
-/usr/share/help/es/gnome-help/help-mailing-list.page
+/usr/share/help/es/gnome-help/help-matrix.page
 /usr/share/help/es/gnome-help/index.page
 /usr/share/help/es/gnome-help/keyboard-cursor-blink.page
 /usr/share/help/es/gnome-help/keyboard-key-menu.page
@@ -4110,9 +4086,9 @@ popd
 /usr/share/help/fa/gnome-help/figures/classic-topbar-network-wireless-acquiring.svg
 /usr/share/help/fa/gnome-help/figures/classic-topbar-network-wireless-connected.svg
 /usr/share/help/fa/gnome-help/figures/classic-topbar-network-wireless-no-route.svg
-/usr/share/help/fa/gnome-help/figures/classic-topbar-network-wireless-strength-excellent.svg
-/usr/share/help/fa/gnome-help/figures/classic-topbar-network-wireless-strength-none.svg
-/usr/share/help/fa/gnome-help/figures/classic-topbar-network-wireless-strength.svg
+/usr/share/help/fa/gnome-help/figures/classic-topbar-network-wireless-signal-excellent.svg
+/usr/share/help/fa/gnome-help/figures/classic-topbar-network-wireless-signal-none.svg
+/usr/share/help/fa/gnome-help/figures/classic-topbar-network-wireless-signal.svg
 /usr/share/help/fa/gnome-help/figures/classic-topbar-night-light.svg
 /usr/share/help/fa/gnome-help/figures/classic-topbar-pointer.svg
 /usr/share/help/fa/gnome-help/figures/classic-topbar-screen-shared.svg
@@ -4153,7 +4129,6 @@ popd
 /usr/share/help/fa/gnome-help/figures/net-wired-ethernet-diagram.svg
 /usr/share/help/fa/gnome-help/figures/network-wired-symbolic.svg
 /usr/share/help/fa/gnome-help/figures/network-wireless-disabled-symbolic.svg
-/usr/share/help/fa/gnome-help/figures/preferences-desktop-accessibility-symbolic.svg
 /usr/share/help/fa/gnome-help/figures/printing-select.png
 /usr/share/help/fa/gnome-help/figures/ps-button.svg
 /usr/share/help/fa/gnome-help/figures/ps-create.svg
@@ -4161,8 +4136,6 @@ popd
 /usr/share/help/fa/gnome-help/figures/rotation-locked-symbolic.svg
 /usr/share/help/fa/gnome-help/figures/screenshot-tool.png
 /usr/share/help/fa/gnome-help/figures/shell-activities-dash.png
-/usr/share/help/fa/gnome-help/figures/shell-appmenu-classic.png
-/usr/share/help/fa/gnome-help/figures/shell-appmenu-shell.png
 /usr/share/help/fa/gnome-help/figures/shell-appts-classic.png
 /usr/share/help/fa/gnome-help/figures/shell-appts.png
 /usr/share/help/fa/gnome-help/figures/shell-exit-classic-expanded.png
@@ -4212,9 +4185,9 @@ popd
 /usr/share/help/fa/gnome-help/figures/topbar-network-wireless-acquiring.svg
 /usr/share/help/fa/gnome-help/figures/topbar-network-wireless-connected.svg
 /usr/share/help/fa/gnome-help/figures/topbar-network-wireless-no-route.svg
-/usr/share/help/fa/gnome-help/figures/topbar-network-wireless-strength-excellent.svg
-/usr/share/help/fa/gnome-help/figures/topbar-network-wireless-strength-none.svg
-/usr/share/help/fa/gnome-help/figures/topbar-network-wireless-strength.svg
+/usr/share/help/fa/gnome-help/figures/topbar-network-wireless-signal-excellent.svg
+/usr/share/help/fa/gnome-help/figures/topbar-network-wireless-signal-none.svg
+/usr/share/help/fa/gnome-help/figures/topbar-network-wireless-signal.svg
 /usr/share/help/fa/gnome-help/figures/topbar-night-light.svg
 /usr/share/help/fa/gnome-help/figures/topbar-pointer.svg
 /usr/share/help/fa/gnome-help/figures/topbar-screen-shared.svg
@@ -4260,7 +4233,7 @@ popd
 /usr/share/help/fa/gnome-help/hardware-problems-graphics.page
 /usr/share/help/fa/gnome-help/hardware.page
 /usr/share/help/fa/gnome-help/help-irc.page
-/usr/share/help/fa/gnome-help/help-mailing-list.page
+/usr/share/help/fa/gnome-help/help-matrix.page
 /usr/share/help/fa/gnome-help/index.page
 /usr/share/help/fa/gnome-help/keyboard-cursor-blink.page
 /usr/share/help/fa/gnome-help/keyboard-key-menu.page
@@ -4445,6 +4418,63 @@ popd
 /usr/share/help/fa/gnome-help/wacom-multi-monitor.page
 /usr/share/help/fa/gnome-help/wacom-stylus.page
 /usr/share/help/fa/gnome-help/wacom.page
+/usr/share/help/fa/system-admin-guide/appearance.page
+/usr/share/help/fa/system-admin-guide/autostart-applications.page
+/usr/share/help/fa/system-admin-guide/backgrounds-extra.page
+/usr/share/help/fa/system-admin-guide/dconf-custom-defaults.page
+/usr/share/help/fa/system-admin-guide/dconf-keyfiles.page
+/usr/share/help/fa/system-admin-guide/dconf-lockdown.page
+/usr/share/help/fa/system-admin-guide/dconf-nfs-home.page
+/usr/share/help/fa/system-admin-guide/dconf-profiles.page
+/usr/share/help/fa/system-admin-guide/dconf-snippets.xml
+/usr/share/help/fa/system-admin-guide/dconf.page
+/usr/share/help/fa/system-admin-guide/desktop-background.page
+/usr/share/help/fa/system-admin-guide/desktop-favorite-applications.page
+/usr/share/help/fa/system-admin-guide/desktop-lockscreen.page
+/usr/share/help/fa/system-admin-guide/desktop-shield.page
+/usr/share/help/fa/system-admin-guide/extensions-enable.page
+/usr/share/help/fa/system-admin-guide/extensions-lockdown.page
+/usr/share/help/fa/system-admin-guide/extensions.page
+/usr/share/help/fa/system-admin-guide/fonts-user.page
+/usr/share/help/fa/system-admin-guide/fonts.page
+/usr/share/help/fa/system-admin-guide/gsettings-browse.page
+/usr/share/help/fa/system-admin-guide/index.page
+/usr/share/help/fa/system-admin-guide/keyboard-compose-key.page
+/usr/share/help/fa/system-admin-guide/keyboard-layout.page
+/usr/share/help/fa/system-admin-guide/legal.xml
+/usr/share/help/fa/system-admin-guide/lockdown-command-line.page
+/usr/share/help/fa/system-admin-guide/lockdown-file-saving.page
+/usr/share/help/fa/system-admin-guide/lockdown-logout.page
+/usr/share/help/fa/system-admin-guide/lockdown-online-accounts.page
+/usr/share/help/fa/system-admin-guide/lockdown-printing.page
+/usr/share/help/fa/system-admin-guide/lockdown-repartitioning.page
+/usr/share/help/fa/system-admin-guide/lockdown-single-app-mode.page
+/usr/share/help/fa/system-admin-guide/login-automatic.page
+/usr/share/help/fa/system-admin-guide/login-banner.page
+/usr/share/help/fa/system-admin-guide/login-enterprise.page
+/usr/share/help/fa/system-admin-guide/login-fingerprint.page
+/usr/share/help/fa/system-admin-guide/login-logo.page
+/usr/share/help/fa/system-admin-guide/login-userlist-disable.page
+/usr/share/help/fa/system-admin-guide/login.page
+/usr/share/help/fa/system-admin-guide/logout-automatic.page
+/usr/share/help/fa/system-admin-guide/mime-types-application-user.page
+/usr/share/help/fa/system-admin-guide/mime-types-application.page
+/usr/share/help/fa/system-admin-guide/mime-types-custom-user.page
+/usr/share/help/fa/system-admin-guide/mime-types-custom.page
+/usr/share/help/fa/system-admin-guide/mime-types.page
+/usr/share/help/fa/system-admin-guide/network-server-list.page
+/usr/share/help/fa/system-admin-guide/network-vpn.page
+/usr/share/help/fa/system-admin-guide/network.page
+/usr/share/help/fa/system-admin-guide/overrides.page
+/usr/share/help/fa/system-admin-guide/power-dim-screen.page
+/usr/share/help/fa/system-admin-guide/processes.page
+/usr/share/help/fa/system-admin-guide/session-custom.page
+/usr/share/help/fa/system-admin-guide/session-debug.page
+/usr/share/help/fa/system-admin-guide/session-user.page
+/usr/share/help/fa/system-admin-guide/setup.page
+/usr/share/help/fa/system-admin-guide/software.page
+/usr/share/help/fa/system-admin-guide/sundry.page
+/usr/share/help/fa/system-admin-guide/user-settings.page
 /usr/share/help/fi/gnome-help/a11y-bouncekeys.page
 /usr/share/help/fi/gnome-help/a11y-braille.page
 /usr/share/help/fi/gnome-help/a11y-contrast.page
@@ -4561,9 +4591,9 @@ popd
 /usr/share/help/fi/gnome-help/figures/classic-topbar-network-wireless-acquiring.svg
 /usr/share/help/fi/gnome-help/figures/classic-topbar-network-wireless-connected.svg
 /usr/share/help/fi/gnome-help/figures/classic-topbar-network-wireless-no-route.svg
-/usr/share/help/fi/gnome-help/figures/classic-topbar-network-wireless-strength-excellent.svg
-/usr/share/help/fi/gnome-help/figures/classic-topbar-network-wireless-strength-none.svg
-/usr/share/help/fi/gnome-help/figures/classic-topbar-network-wireless-strength.svg
+/usr/share/help/fi/gnome-help/figures/classic-topbar-network-wireless-signal-excellent.svg
+/usr/share/help/fi/gnome-help/figures/classic-topbar-network-wireless-signal-none.svg
+/usr/share/help/fi/gnome-help/figures/classic-topbar-network-wireless-signal.svg
 /usr/share/help/fi/gnome-help/figures/classic-topbar-night-light.svg
 /usr/share/help/fi/gnome-help/figures/classic-topbar-pointer.svg
 /usr/share/help/fi/gnome-help/figures/classic-topbar-screen-shared.svg
@@ -4604,7 +4634,6 @@ popd
 /usr/share/help/fi/gnome-help/figures/net-wired-ethernet-diagram.svg
 /usr/share/help/fi/gnome-help/figures/network-wired-symbolic.svg
 /usr/share/help/fi/gnome-help/figures/network-wireless-disabled-symbolic.svg
-/usr/share/help/fi/gnome-help/figures/preferences-desktop-accessibility-symbolic.svg
 /usr/share/help/fi/gnome-help/figures/printing-select.png
 /usr/share/help/fi/gnome-help/figures/ps-button.svg
 /usr/share/help/fi/gnome-help/figures/ps-create.svg
@@ -4612,8 +4641,6 @@ popd
 /usr/share/help/fi/gnome-help/figures/rotation-locked-symbolic.svg
 /usr/share/help/fi/gnome-help/figures/screenshot-tool.png
 /usr/share/help/fi/gnome-help/figures/shell-activities-dash.png
-/usr/share/help/fi/gnome-help/figures/shell-appmenu-classic.png
-/usr/share/help/fi/gnome-help/figures/shell-appmenu-shell.png
 /usr/share/help/fi/gnome-help/figures/shell-appts-classic.png
 /usr/share/help/fi/gnome-help/figures/shell-appts.png
 /usr/share/help/fi/gnome-help/figures/shell-exit-classic-expanded.png
@@ -4663,9 +4690,9 @@ popd
 /usr/share/help/fi/gnome-help/figures/topbar-network-wireless-acquiring.svg
 /usr/share/help/fi/gnome-help/figures/topbar-network-wireless-connected.svg
 /usr/share/help/fi/gnome-help/figures/topbar-network-wireless-no-route.svg
-/usr/share/help/fi/gnome-help/figures/topbar-network-wireless-strength-excellent.svg
-/usr/share/help/fi/gnome-help/figures/topbar-network-wireless-strength-none.svg
-/usr/share/help/fi/gnome-help/figures/topbar-network-wireless-strength.svg
+/usr/share/help/fi/gnome-help/figures/topbar-network-wireless-signal-excellent.svg
+/usr/share/help/fi/gnome-help/figures/topbar-network-wireless-signal-none.svg
+/usr/share/help/fi/gnome-help/figures/topbar-network-wireless-signal.svg
 /usr/share/help/fi/gnome-help/figures/topbar-night-light.svg
 /usr/share/help/fi/gnome-help/figures/topbar-pointer.svg
 /usr/share/help/fi/gnome-help/figures/topbar-screen-shared.svg
@@ -4711,7 +4738,7 @@ popd
 /usr/share/help/fi/gnome-help/hardware-problems-graphics.page
 /usr/share/help/fi/gnome-help/hardware.page
 /usr/share/help/fi/gnome-help/help-irc.page
-/usr/share/help/fi/gnome-help/help-mailing-list.page
+/usr/share/help/fi/gnome-help/help-matrix.page
 /usr/share/help/fi/gnome-help/index.page
 /usr/share/help/fi/gnome-help/keyboard-cursor-blink.page
 /usr/share/help/fi/gnome-help/keyboard-key-menu.page
@@ -5012,9 +5039,9 @@ popd
 /usr/share/help/fr/gnome-help/figures/classic-topbar-network-wireless-acquiring.svg
 /usr/share/help/fr/gnome-help/figures/classic-topbar-network-wireless-connected.svg
 /usr/share/help/fr/gnome-help/figures/classic-topbar-network-wireless-no-route.svg
-/usr/share/help/fr/gnome-help/figures/classic-topbar-network-wireless-strength-excellent.svg
-/usr/share/help/fr/gnome-help/figures/classic-topbar-network-wireless-strength-none.svg
-/usr/share/help/fr/gnome-help/figures/classic-topbar-network-wireless-strength.svg
+/usr/share/help/fr/gnome-help/figures/classic-topbar-network-wireless-signal-excellent.svg
+/usr/share/help/fr/gnome-help/figures/classic-topbar-network-wireless-signal-none.svg
+/usr/share/help/fr/gnome-help/figures/classic-topbar-network-wireless-signal.svg
 /usr/share/help/fr/gnome-help/figures/classic-topbar-night-light.svg
 /usr/share/help/fr/gnome-help/figures/classic-topbar-pointer.svg
 /usr/share/help/fr/gnome-help/figures/classic-topbar-screen-shared.svg
@@ -5055,7 +5082,6 @@ popd
 /usr/share/help/fr/gnome-help/figures/net-wired-ethernet-diagram.svg
 /usr/share/help/fr/gnome-help/figures/network-wired-symbolic.svg
 /usr/share/help/fr/gnome-help/figures/network-wireless-disabled-symbolic.svg
-/usr/share/help/fr/gnome-help/figures/preferences-desktop-accessibility-symbolic.svg
 /usr/share/help/fr/gnome-help/figures/printing-select.png
 /usr/share/help/fr/gnome-help/figures/ps-button.svg
 /usr/share/help/fr/gnome-help/figures/ps-create.svg
@@ -5063,8 +5089,6 @@ popd
 /usr/share/help/fr/gnome-help/figures/rotation-locked-symbolic.svg
 /usr/share/help/fr/gnome-help/figures/screenshot-tool.png
 /usr/share/help/fr/gnome-help/figures/shell-activities-dash.png
-/usr/share/help/fr/gnome-help/figures/shell-appmenu-classic.png
-/usr/share/help/fr/gnome-help/figures/shell-appmenu-shell.png
 /usr/share/help/fr/gnome-help/figures/shell-appts-classic.png
 /usr/share/help/fr/gnome-help/figures/shell-appts.png
 /usr/share/help/fr/gnome-help/figures/shell-exit-classic-expanded.png
@@ -5114,9 +5138,9 @@ popd
 /usr/share/help/fr/gnome-help/figures/topbar-network-wireless-acquiring.svg
 /usr/share/help/fr/gnome-help/figures/topbar-network-wireless-connected.svg
 /usr/share/help/fr/gnome-help/figures/topbar-network-wireless-no-route.svg
-/usr/share/help/fr/gnome-help/figures/topbar-network-wireless-strength-excellent.svg
-/usr/share/help/fr/gnome-help/figures/topbar-network-wireless-strength-none.svg
-/usr/share/help/fr/gnome-help/figures/topbar-network-wireless-strength.svg
+/usr/share/help/fr/gnome-help/figures/topbar-network-wireless-signal-excellent.svg
+/usr/share/help/fr/gnome-help/figures/topbar-network-wireless-signal-none.svg
+/usr/share/help/fr/gnome-help/figures/topbar-network-wireless-signal.svg
 /usr/share/help/fr/gnome-help/figures/topbar-night-light.svg
 /usr/share/help/fr/gnome-help/figures/topbar-pointer.svg
 /usr/share/help/fr/gnome-help/figures/topbar-screen-shared.svg
@@ -5162,7 +5186,7 @@ popd
 /usr/share/help/fr/gnome-help/hardware-problems-graphics.page
 /usr/share/help/fr/gnome-help/hardware.page
 /usr/share/help/fr/gnome-help/help-irc.page
-/usr/share/help/fr/gnome-help/help-mailing-list.page
+/usr/share/help/fr/gnome-help/help-matrix.page
 /usr/share/help/fr/gnome-help/index.page
 /usr/share/help/fr/gnome-help/keyboard-cursor-blink.page
 /usr/share/help/fr/gnome-help/keyboard-key-menu.page
@@ -5520,9 +5544,9 @@ popd
 /usr/share/help/gl/gnome-help/figures/classic-topbar-network-wireless-acquiring.svg
 /usr/share/help/gl/gnome-help/figures/classic-topbar-network-wireless-connected.svg
 /usr/share/help/gl/gnome-help/figures/classic-topbar-network-wireless-no-route.svg
-/usr/share/help/gl/gnome-help/figures/classic-topbar-network-wireless-strength-excellent.svg
-/usr/share/help/gl/gnome-help/figures/classic-topbar-network-wireless-strength-none.svg
-/usr/share/help/gl/gnome-help/figures/classic-topbar-network-wireless-strength.svg
+/usr/share/help/gl/gnome-help/figures/classic-topbar-network-wireless-signal-excellent.svg
+/usr/share/help/gl/gnome-help/figures/classic-topbar-network-wireless-signal-none.svg
+/usr/share/help/gl/gnome-help/figures/classic-topbar-network-wireless-signal.svg
 /usr/share/help/gl/gnome-help/figures/classic-topbar-night-light.svg
 /usr/share/help/gl/gnome-help/figures/classic-topbar-pointer.svg
 /usr/share/help/gl/gnome-help/figures/classic-topbar-screen-shared.svg
@@ -5563,7 +5587,6 @@ popd
 /usr/share/help/gl/gnome-help/figures/net-wired-ethernet-diagram.svg
 /usr/share/help/gl/gnome-help/figures/network-wired-symbolic.svg
 /usr/share/help/gl/gnome-help/figures/network-wireless-disabled-symbolic.svg
-/usr/share/help/gl/gnome-help/figures/preferences-desktop-accessibility-symbolic.svg
 /usr/share/help/gl/gnome-help/figures/printing-select.png
 /usr/share/help/gl/gnome-help/figures/ps-button.svg
 /usr/share/help/gl/gnome-help/figures/ps-create.svg
@@ -5571,8 +5594,6 @@ popd
 /usr/share/help/gl/gnome-help/figures/rotation-locked-symbolic.svg
 /usr/share/help/gl/gnome-help/figures/screenshot-tool.png
 /usr/share/help/gl/gnome-help/figures/shell-activities-dash.png
-/usr/share/help/gl/gnome-help/figures/shell-appmenu-classic.png
-/usr/share/help/gl/gnome-help/figures/shell-appmenu-shell.png
 /usr/share/help/gl/gnome-help/figures/shell-appts-classic.png
 /usr/share/help/gl/gnome-help/figures/shell-appts.png
 /usr/share/help/gl/gnome-help/figures/shell-exit-classic-expanded.png
@@ -5622,9 +5643,9 @@ popd
 /usr/share/help/gl/gnome-help/figures/topbar-network-wireless-acquiring.svg
 /usr/share/help/gl/gnome-help/figures/topbar-network-wireless-connected.svg
 /usr/share/help/gl/gnome-help/figures/topbar-network-wireless-no-route.svg
-/usr/share/help/gl/gnome-help/figures/topbar-network-wireless-strength-excellent.svg
-/usr/share/help/gl/gnome-help/figures/topbar-network-wireless-strength-none.svg
-/usr/share/help/gl/gnome-help/figures/topbar-network-wireless-strength.svg
+/usr/share/help/gl/gnome-help/figures/topbar-network-wireless-signal-excellent.svg
+/usr/share/help/gl/gnome-help/figures/topbar-network-wireless-signal-none.svg
+/usr/share/help/gl/gnome-help/figures/topbar-network-wireless-signal.svg
 /usr/share/help/gl/gnome-help/figures/topbar-night-light.svg
 /usr/share/help/gl/gnome-help/figures/topbar-pointer.svg
 /usr/share/help/gl/gnome-help/figures/topbar-screen-shared.svg
@@ -5670,7 +5691,7 @@ popd
 /usr/share/help/gl/gnome-help/hardware-problems-graphics.page
 /usr/share/help/gl/gnome-help/hardware.page
 /usr/share/help/gl/gnome-help/help-irc.page
-/usr/share/help/gl/gnome-help/help-mailing-list.page
+/usr/share/help/gl/gnome-help/help-matrix.page
 /usr/share/help/gl/gnome-help/index.page
 /usr/share/help/gl/gnome-help/keyboard-cursor-blink.page
 /usr/share/help/gl/gnome-help/keyboard-key-menu.page
@@ -6028,9 +6049,9 @@ popd
 /usr/share/help/gu/gnome-help/figures/classic-topbar-network-wireless-acquiring.svg
 /usr/share/help/gu/gnome-help/figures/classic-topbar-network-wireless-connected.svg
 /usr/share/help/gu/gnome-help/figures/classic-topbar-network-wireless-no-route.svg
-/usr/share/help/gu/gnome-help/figures/classic-topbar-network-wireless-strength-excellent.svg
-/usr/share/help/gu/gnome-help/figures/classic-topbar-network-wireless-strength-none.svg
-/usr/share/help/gu/gnome-help/figures/classic-topbar-network-wireless-strength.svg
+/usr/share/help/gu/gnome-help/figures/classic-topbar-network-wireless-signal-excellent.svg
+/usr/share/help/gu/gnome-help/figures/classic-topbar-network-wireless-signal-none.svg
+/usr/share/help/gu/gnome-help/figures/classic-topbar-network-wireless-signal.svg
 /usr/share/help/gu/gnome-help/figures/classic-topbar-night-light.svg
 /usr/share/help/gu/gnome-help/figures/classic-topbar-pointer.svg
 /usr/share/help/gu/gnome-help/figures/classic-topbar-screen-shared.svg
@@ -6071,7 +6092,6 @@ popd
 /usr/share/help/gu/gnome-help/figures/net-wired-ethernet-diagram.svg
 /usr/share/help/gu/gnome-help/figures/network-wired-symbolic.svg
 /usr/share/help/gu/gnome-help/figures/network-wireless-disabled-symbolic.svg
-/usr/share/help/gu/gnome-help/figures/preferences-desktop-accessibility-symbolic.svg
 /usr/share/help/gu/gnome-help/figures/printing-select.png
 /usr/share/help/gu/gnome-help/figures/ps-button.svg
 /usr/share/help/gu/gnome-help/figures/ps-create.svg
@@ -6079,8 +6099,6 @@ popd
 /usr/share/help/gu/gnome-help/figures/rotation-locked-symbolic.svg
 /usr/share/help/gu/gnome-help/figures/screenshot-tool.png
 /usr/share/help/gu/gnome-help/figures/shell-activities-dash.png
-/usr/share/help/gu/gnome-help/figures/shell-appmenu-classic.png
-/usr/share/help/gu/gnome-help/figures/shell-appmenu-shell.png
 /usr/share/help/gu/gnome-help/figures/shell-appts-classic.png
 /usr/share/help/gu/gnome-help/figures/shell-appts.png
 /usr/share/help/gu/gnome-help/figures/shell-exit-classic-expanded.png
@@ -6130,9 +6148,9 @@ popd
 /usr/share/help/gu/gnome-help/figures/topbar-network-wireless-acquiring.svg
 /usr/share/help/gu/gnome-help/figures/topbar-network-wireless-connected.svg
 /usr/share/help/gu/gnome-help/figures/topbar-network-wireless-no-route.svg
-/usr/share/help/gu/gnome-help/figures/topbar-network-wireless-strength-excellent.svg
-/usr/share/help/gu/gnome-help/figures/topbar-network-wireless-strength-none.svg
-/usr/share/help/gu/gnome-help/figures/topbar-network-wireless-strength.svg
+/usr/share/help/gu/gnome-help/figures/topbar-network-wireless-signal-excellent.svg
+/usr/share/help/gu/gnome-help/figures/topbar-network-wireless-signal-none.svg
+/usr/share/help/gu/gnome-help/figures/topbar-network-wireless-signal.svg
 /usr/share/help/gu/gnome-help/figures/topbar-night-light.svg
 /usr/share/help/gu/gnome-help/figures/topbar-pointer.svg
 /usr/share/help/gu/gnome-help/figures/topbar-screen-shared.svg
@@ -6178,7 +6196,7 @@ popd
 /usr/share/help/gu/gnome-help/hardware-problems-graphics.page
 /usr/share/help/gu/gnome-help/hardware.page
 /usr/share/help/gu/gnome-help/help-irc.page
-/usr/share/help/gu/gnome-help/help-mailing-list.page
+/usr/share/help/gu/gnome-help/help-matrix.page
 /usr/share/help/gu/gnome-help/index.page
 /usr/share/help/gu/gnome-help/keyboard-cursor-blink.page
 /usr/share/help/gu/gnome-help/keyboard-key-menu.page
@@ -6479,9 +6497,9 @@ popd
 /usr/share/help/he/gnome-help/figures/classic-topbar-network-wireless-acquiring.svg
 /usr/share/help/he/gnome-help/figures/classic-topbar-network-wireless-connected.svg
 /usr/share/help/he/gnome-help/figures/classic-topbar-network-wireless-no-route.svg
-/usr/share/help/he/gnome-help/figures/classic-topbar-network-wireless-strength-excellent.svg
-/usr/share/help/he/gnome-help/figures/classic-topbar-network-wireless-strength-none.svg
-/usr/share/help/he/gnome-help/figures/classic-topbar-network-wireless-strength.svg
+/usr/share/help/he/gnome-help/figures/classic-topbar-network-wireless-signal-excellent.svg
+/usr/share/help/he/gnome-help/figures/classic-topbar-network-wireless-signal-none.svg
+/usr/share/help/he/gnome-help/figures/classic-topbar-network-wireless-signal.svg
 /usr/share/help/he/gnome-help/figures/classic-topbar-night-light.svg
 /usr/share/help/he/gnome-help/figures/classic-topbar-pointer.svg
 /usr/share/help/he/gnome-help/figures/classic-topbar-screen-shared.svg
@@ -6522,7 +6540,6 @@ popd
 /usr/share/help/he/gnome-help/figures/net-wired-ethernet-diagram.svg
 /usr/share/help/he/gnome-help/figures/network-wired-symbolic.svg
 /usr/share/help/he/gnome-help/figures/network-wireless-disabled-symbolic.svg
-/usr/share/help/he/gnome-help/figures/preferences-desktop-accessibility-symbolic.svg
 /usr/share/help/he/gnome-help/figures/printing-select.png
 /usr/share/help/he/gnome-help/figures/ps-button.svg
 /usr/share/help/he/gnome-help/figures/ps-create.svg
@@ -6530,8 +6547,6 @@ popd
 /usr/share/help/he/gnome-help/figures/rotation-locked-symbolic.svg
 /usr/share/help/he/gnome-help/figures/screenshot-tool.png
 /usr/share/help/he/gnome-help/figures/shell-activities-dash.png
-/usr/share/help/he/gnome-help/figures/shell-appmenu-classic.png
-/usr/share/help/he/gnome-help/figures/shell-appmenu-shell.png
 /usr/share/help/he/gnome-help/figures/shell-appts-classic.png
 /usr/share/help/he/gnome-help/figures/shell-appts.png
 /usr/share/help/he/gnome-help/figures/shell-exit-classic-expanded.png
@@ -6581,9 +6596,9 @@ popd
 /usr/share/help/he/gnome-help/figures/topbar-network-wireless-acquiring.svg
 /usr/share/help/he/gnome-help/figures/topbar-network-wireless-connected.svg
 /usr/share/help/he/gnome-help/figures/topbar-network-wireless-no-route.svg
-/usr/share/help/he/gnome-help/figures/topbar-network-wireless-strength-excellent.svg
-/usr/share/help/he/gnome-help/figures/topbar-network-wireless-strength-none.svg
-/usr/share/help/he/gnome-help/figures/topbar-network-wireless-strength.svg
+/usr/share/help/he/gnome-help/figures/topbar-network-wireless-signal-excellent.svg
+/usr/share/help/he/gnome-help/figures/topbar-network-wireless-signal-none.svg
+/usr/share/help/he/gnome-help/figures/topbar-network-wireless-signal.svg
 /usr/share/help/he/gnome-help/figures/topbar-night-light.svg
 /usr/share/help/he/gnome-help/figures/topbar-pointer.svg
 /usr/share/help/he/gnome-help/figures/topbar-screen-shared.svg
@@ -6629,7 +6644,7 @@ popd
 /usr/share/help/he/gnome-help/hardware-problems-graphics.page
 /usr/share/help/he/gnome-help/hardware.page
 /usr/share/help/he/gnome-help/help-irc.page
-/usr/share/help/he/gnome-help/help-mailing-list.page
+/usr/share/help/he/gnome-help/help-matrix.page
 /usr/share/help/he/gnome-help/index.page
 /usr/share/help/he/gnome-help/keyboard-cursor-blink.page
 /usr/share/help/he/gnome-help/keyboard-key-menu.page
@@ -6930,9 +6945,9 @@ popd
 /usr/share/help/hi/gnome-help/figures/classic-topbar-network-wireless-acquiring.svg
 /usr/share/help/hi/gnome-help/figures/classic-topbar-network-wireless-connected.svg
 /usr/share/help/hi/gnome-help/figures/classic-topbar-network-wireless-no-route.svg
-/usr/share/help/hi/gnome-help/figures/classic-topbar-network-wireless-strength-excellent.svg
-/usr/share/help/hi/gnome-help/figures/classic-topbar-network-wireless-strength-none.svg
-/usr/share/help/hi/gnome-help/figures/classic-topbar-network-wireless-strength.svg
+/usr/share/help/hi/gnome-help/figures/classic-topbar-network-wireless-signal-excellent.svg
+/usr/share/help/hi/gnome-help/figures/classic-topbar-network-wireless-signal-none.svg
+/usr/share/help/hi/gnome-help/figures/classic-topbar-network-wireless-signal.svg
 /usr/share/help/hi/gnome-help/figures/classic-topbar-night-light.svg
 /usr/share/help/hi/gnome-help/figures/classic-topbar-pointer.svg
 /usr/share/help/hi/gnome-help/figures/classic-topbar-screen-shared.svg
@@ -6973,7 +6988,6 @@ popd
 /usr/share/help/hi/gnome-help/figures/net-wired-ethernet-diagram.svg
 /usr/share/help/hi/gnome-help/figures/network-wired-symbolic.svg
 /usr/share/help/hi/gnome-help/figures/network-wireless-disabled-symbolic.svg
-/usr/share/help/hi/gnome-help/figures/preferences-desktop-accessibility-symbolic.svg
 /usr/share/help/hi/gnome-help/figures/printing-select.png
 /usr/share/help/hi/gnome-help/figures/ps-button.svg
 /usr/share/help/hi/gnome-help/figures/ps-create.svg
@@ -6981,8 +6995,6 @@ popd
 /usr/share/help/hi/gnome-help/figures/rotation-locked-symbolic.svg
 /usr/share/help/hi/gnome-help/figures/screenshot-tool.png
 /usr/share/help/hi/gnome-help/figures/shell-activities-dash.png
-/usr/share/help/hi/gnome-help/figures/shell-appmenu-classic.png
-/usr/share/help/hi/gnome-help/figures/shell-appmenu-shell.png
 /usr/share/help/hi/gnome-help/figures/shell-appts-classic.png
 /usr/share/help/hi/gnome-help/figures/shell-appts.png
 /usr/share/help/hi/gnome-help/figures/shell-exit-classic-expanded.png
@@ -7032,9 +7044,9 @@ popd
 /usr/share/help/hi/gnome-help/figures/topbar-network-wireless-acquiring.svg
 /usr/share/help/hi/gnome-help/figures/topbar-network-wireless-connected.svg
 /usr/share/help/hi/gnome-help/figures/topbar-network-wireless-no-route.svg
-/usr/share/help/hi/gnome-help/figures/topbar-network-wireless-strength-excellent.svg
-/usr/share/help/hi/gnome-help/figures/topbar-network-wireless-strength-none.svg
-/usr/share/help/hi/gnome-help/figures/topbar-network-wireless-strength.svg
+/usr/share/help/hi/gnome-help/figures/topbar-network-wireless-signal-excellent.svg
+/usr/share/help/hi/gnome-help/figures/topbar-network-wireless-signal-none.svg
+/usr/share/help/hi/gnome-help/figures/topbar-network-wireless-signal.svg
 /usr/share/help/hi/gnome-help/figures/topbar-night-light.svg
 /usr/share/help/hi/gnome-help/figures/topbar-pointer.svg
 /usr/share/help/hi/gnome-help/figures/topbar-screen-shared.svg
@@ -7080,7 +7092,7 @@ popd
 /usr/share/help/hi/gnome-help/hardware-problems-graphics.page
 /usr/share/help/hi/gnome-help/hardware.page
 /usr/share/help/hi/gnome-help/help-irc.page
-/usr/share/help/hi/gnome-help/help-mailing-list.page
+/usr/share/help/hi/gnome-help/help-matrix.page
 /usr/share/help/hi/gnome-help/index.page
 /usr/share/help/hi/gnome-help/keyboard-cursor-blink.page
 /usr/share/help/hi/gnome-help/keyboard-key-menu.page
@@ -7381,9 +7393,9 @@ popd
 /usr/share/help/hr/gnome-help/figures/classic-topbar-network-wireless-acquiring.svg
 /usr/share/help/hr/gnome-help/figures/classic-topbar-network-wireless-connected.svg
 /usr/share/help/hr/gnome-help/figures/classic-topbar-network-wireless-no-route.svg
-/usr/share/help/hr/gnome-help/figures/classic-topbar-network-wireless-strength-excellent.svg
-/usr/share/help/hr/gnome-help/figures/classic-topbar-network-wireless-strength-none.svg
-/usr/share/help/hr/gnome-help/figures/classic-topbar-network-wireless-strength.svg
+/usr/share/help/hr/gnome-help/figures/classic-topbar-network-wireless-signal-excellent.svg
+/usr/share/help/hr/gnome-help/figures/classic-topbar-network-wireless-signal-none.svg
+/usr/share/help/hr/gnome-help/figures/classic-topbar-network-wireless-signal.svg
 /usr/share/help/hr/gnome-help/figures/classic-topbar-night-light.svg
 /usr/share/help/hr/gnome-help/figures/classic-topbar-pointer.svg
 /usr/share/help/hr/gnome-help/figures/classic-topbar-screen-shared.svg
@@ -7424,7 +7436,6 @@ popd
 /usr/share/help/hr/gnome-help/figures/net-wired-ethernet-diagram.svg
 /usr/share/help/hr/gnome-help/figures/network-wired-symbolic.svg
 /usr/share/help/hr/gnome-help/figures/network-wireless-disabled-symbolic.svg
-/usr/share/help/hr/gnome-help/figures/preferences-desktop-accessibility-symbolic.svg
 /usr/share/help/hr/gnome-help/figures/printing-select.png
 /usr/share/help/hr/gnome-help/figures/ps-button.svg
 /usr/share/help/hr/gnome-help/figures/ps-create.svg
@@ -7432,8 +7443,6 @@ popd
 /usr/share/help/hr/gnome-help/figures/rotation-locked-symbolic.svg
 /usr/share/help/hr/gnome-help/figures/screenshot-tool.png
 /usr/share/help/hr/gnome-help/figures/shell-activities-dash.png
-/usr/share/help/hr/gnome-help/figures/shell-appmenu-classic.png
-/usr/share/help/hr/gnome-help/figures/shell-appmenu-shell.png
 /usr/share/help/hr/gnome-help/figures/shell-appts-classic.png
 /usr/share/help/hr/gnome-help/figures/shell-appts.png
 /usr/share/help/hr/gnome-help/figures/shell-exit-classic-expanded.png
@@ -7483,9 +7492,9 @@ popd
 /usr/share/help/hr/gnome-help/figures/topbar-network-wireless-acquiring.svg
 /usr/share/help/hr/gnome-help/figures/topbar-network-wireless-connected.svg
 /usr/share/help/hr/gnome-help/figures/topbar-network-wireless-no-route.svg
-/usr/share/help/hr/gnome-help/figures/topbar-network-wireless-strength-excellent.svg
-/usr/share/help/hr/gnome-help/figures/topbar-network-wireless-strength-none.svg
-/usr/share/help/hr/gnome-help/figures/topbar-network-wireless-strength.svg
+/usr/share/help/hr/gnome-help/figures/topbar-network-wireless-signal-excellent.svg
+/usr/share/help/hr/gnome-help/figures/topbar-network-wireless-signal-none.svg
+/usr/share/help/hr/gnome-help/figures/topbar-network-wireless-signal.svg
 /usr/share/help/hr/gnome-help/figures/topbar-night-light.svg
 /usr/share/help/hr/gnome-help/figures/topbar-pointer.svg
 /usr/share/help/hr/gnome-help/figures/topbar-screen-shared.svg
@@ -7531,7 +7540,7 @@ popd
 /usr/share/help/hr/gnome-help/hardware-problems-graphics.page
 /usr/share/help/hr/gnome-help/hardware.page
 /usr/share/help/hr/gnome-help/help-irc.page
-/usr/share/help/hr/gnome-help/help-mailing-list.page
+/usr/share/help/hr/gnome-help/help-matrix.page
 /usr/share/help/hr/gnome-help/index.page
 /usr/share/help/hr/gnome-help/keyboard-cursor-blink.page
 /usr/share/help/hr/gnome-help/keyboard-key-menu.page
@@ -7889,9 +7898,9 @@ popd
 /usr/share/help/hu/gnome-help/figures/classic-topbar-network-wireless-acquiring.svg
 /usr/share/help/hu/gnome-help/figures/classic-topbar-network-wireless-connected.svg
 /usr/share/help/hu/gnome-help/figures/classic-topbar-network-wireless-no-route.svg
-/usr/share/help/hu/gnome-help/figures/classic-topbar-network-wireless-strength-excellent.svg
-/usr/share/help/hu/gnome-help/figures/classic-topbar-network-wireless-strength-none.svg
-/usr/share/help/hu/gnome-help/figures/classic-topbar-network-wireless-strength.svg
+/usr/share/help/hu/gnome-help/figures/classic-topbar-network-wireless-signal-excellent.svg
+/usr/share/help/hu/gnome-help/figures/classic-topbar-network-wireless-signal-none.svg
+/usr/share/help/hu/gnome-help/figures/classic-topbar-network-wireless-signal.svg
 /usr/share/help/hu/gnome-help/figures/classic-topbar-night-light.svg
 /usr/share/help/hu/gnome-help/figures/classic-topbar-pointer.svg
 /usr/share/help/hu/gnome-help/figures/classic-topbar-screen-shared.svg
@@ -7932,7 +7941,6 @@ popd
 /usr/share/help/hu/gnome-help/figures/net-wired-ethernet-diagram.svg
 /usr/share/help/hu/gnome-help/figures/network-wired-symbolic.svg
 /usr/share/help/hu/gnome-help/figures/network-wireless-disabled-symbolic.svg
-/usr/share/help/hu/gnome-help/figures/preferences-desktop-accessibility-symbolic.svg
 /usr/share/help/hu/gnome-help/figures/printing-select.png
 /usr/share/help/hu/gnome-help/figures/ps-button.svg
 /usr/share/help/hu/gnome-help/figures/ps-create.svg
@@ -7940,8 +7948,6 @@ popd
 /usr/share/help/hu/gnome-help/figures/rotation-locked-symbolic.svg
 /usr/share/help/hu/gnome-help/figures/screenshot-tool.png
 /usr/share/help/hu/gnome-help/figures/shell-activities-dash.png
-/usr/share/help/hu/gnome-help/figures/shell-appmenu-classic.png
-/usr/share/help/hu/gnome-help/figures/shell-appmenu-shell.png
 /usr/share/help/hu/gnome-help/figures/shell-appts-classic.png
 /usr/share/help/hu/gnome-help/figures/shell-appts.png
 /usr/share/help/hu/gnome-help/figures/shell-exit-classic-expanded.png
@@ -7991,9 +7997,9 @@ popd
 /usr/share/help/hu/gnome-help/figures/topbar-network-wireless-acquiring.svg
 /usr/share/help/hu/gnome-help/figures/topbar-network-wireless-connected.svg
 /usr/share/help/hu/gnome-help/figures/topbar-network-wireless-no-route.svg
-/usr/share/help/hu/gnome-help/figures/topbar-network-wireless-strength-excellent.svg
-/usr/share/help/hu/gnome-help/figures/topbar-network-wireless-strength-none.svg
-/usr/share/help/hu/gnome-help/figures/topbar-network-wireless-strength.svg
+/usr/share/help/hu/gnome-help/figures/topbar-network-wireless-signal-excellent.svg
+/usr/share/help/hu/gnome-help/figures/topbar-network-wireless-signal-none.svg
+/usr/share/help/hu/gnome-help/figures/topbar-network-wireless-signal.svg
 /usr/share/help/hu/gnome-help/figures/topbar-night-light.svg
 /usr/share/help/hu/gnome-help/figures/topbar-pointer.svg
 /usr/share/help/hu/gnome-help/figures/topbar-screen-shared.svg
@@ -8039,7 +8045,7 @@ popd
 /usr/share/help/hu/gnome-help/hardware-problems-graphics.page
 /usr/share/help/hu/gnome-help/hardware.page
 /usr/share/help/hu/gnome-help/help-irc.page
-/usr/share/help/hu/gnome-help/help-mailing-list.page
+/usr/share/help/hu/gnome-help/help-matrix.page
 /usr/share/help/hu/gnome-help/index.page
 /usr/share/help/hu/gnome-help/keyboard-cursor-blink.page
 /usr/share/help/hu/gnome-help/keyboard-key-menu.page
@@ -8397,9 +8403,9 @@ popd
 /usr/share/help/id/gnome-help/figures/classic-topbar-network-wireless-acquiring.svg
 /usr/share/help/id/gnome-help/figures/classic-topbar-network-wireless-connected.svg
 /usr/share/help/id/gnome-help/figures/classic-topbar-network-wireless-no-route.svg
-/usr/share/help/id/gnome-help/figures/classic-topbar-network-wireless-strength-excellent.svg
-/usr/share/help/id/gnome-help/figures/classic-topbar-network-wireless-strength-none.svg
-/usr/share/help/id/gnome-help/figures/classic-topbar-network-wireless-strength.svg
+/usr/share/help/id/gnome-help/figures/classic-topbar-network-wireless-signal-excellent.svg
+/usr/share/help/id/gnome-help/figures/classic-topbar-network-wireless-signal-none.svg
+/usr/share/help/id/gnome-help/figures/classic-topbar-network-wireless-signal.svg
 /usr/share/help/id/gnome-help/figures/classic-topbar-night-light.svg
 /usr/share/help/id/gnome-help/figures/classic-topbar-pointer.svg
 /usr/share/help/id/gnome-help/figures/classic-topbar-screen-shared.svg
@@ -8440,7 +8446,6 @@ popd
 /usr/share/help/id/gnome-help/figures/net-wired-ethernet-diagram.svg
 /usr/share/help/id/gnome-help/figures/network-wired-symbolic.svg
 /usr/share/help/id/gnome-help/figures/network-wireless-disabled-symbolic.svg
-/usr/share/help/id/gnome-help/figures/preferences-desktop-accessibility-symbolic.svg
 /usr/share/help/id/gnome-help/figures/printing-select.png
 /usr/share/help/id/gnome-help/figures/ps-button.svg
 /usr/share/help/id/gnome-help/figures/ps-create.svg
@@ -8448,8 +8453,6 @@ popd
 /usr/share/help/id/gnome-help/figures/rotation-locked-symbolic.svg
 /usr/share/help/id/gnome-help/figures/screenshot-tool.png
 /usr/share/help/id/gnome-help/figures/shell-activities-dash.png
-/usr/share/help/id/gnome-help/figures/shell-appmenu-classic.png
-/usr/share/help/id/gnome-help/figures/shell-appmenu-shell.png
 /usr/share/help/id/gnome-help/figures/shell-appts-classic.png
 /usr/share/help/id/gnome-help/figures/shell-appts.png
 /usr/share/help/id/gnome-help/figures/shell-exit-classic-expanded.png
@@ -8499,9 +8502,9 @@ popd
 /usr/share/help/id/gnome-help/figures/topbar-network-wireless-acquiring.svg
 /usr/share/help/id/gnome-help/figures/topbar-network-wireless-connected.svg
 /usr/share/help/id/gnome-help/figures/topbar-network-wireless-no-route.svg
-/usr/share/help/id/gnome-help/figures/topbar-network-wireless-strength-excellent.svg
-/usr/share/help/id/gnome-help/figures/topbar-network-wireless-strength-none.svg
-/usr/share/help/id/gnome-help/figures/topbar-network-wireless-strength.svg
+/usr/share/help/id/gnome-help/figures/topbar-network-wireless-signal-excellent.svg
+/usr/share/help/id/gnome-help/figures/topbar-network-wireless-signal-none.svg
+/usr/share/help/id/gnome-help/figures/topbar-network-wireless-signal.svg
 /usr/share/help/id/gnome-help/figures/topbar-night-light.svg
 /usr/share/help/id/gnome-help/figures/topbar-pointer.svg
 /usr/share/help/id/gnome-help/figures/topbar-screen-shared.svg
@@ -8547,7 +8550,7 @@ popd
 /usr/share/help/id/gnome-help/hardware-problems-graphics.page
 /usr/share/help/id/gnome-help/hardware.page
 /usr/share/help/id/gnome-help/help-irc.page
-/usr/share/help/id/gnome-help/help-mailing-list.page
+/usr/share/help/id/gnome-help/help-matrix.page
 /usr/share/help/id/gnome-help/index.page
 /usr/share/help/id/gnome-help/keyboard-cursor-blink.page
 /usr/share/help/id/gnome-help/keyboard-key-menu.page
@@ -8905,9 +8908,9 @@ popd
 /usr/share/help/it/gnome-help/figures/classic-topbar-network-wireless-acquiring.svg
 /usr/share/help/it/gnome-help/figures/classic-topbar-network-wireless-connected.svg
 /usr/share/help/it/gnome-help/figures/classic-topbar-network-wireless-no-route.svg
-/usr/share/help/it/gnome-help/figures/classic-topbar-network-wireless-strength-excellent.svg
-/usr/share/help/it/gnome-help/figures/classic-topbar-network-wireless-strength-none.svg
-/usr/share/help/it/gnome-help/figures/classic-topbar-network-wireless-strength.svg
+/usr/share/help/it/gnome-help/figures/classic-topbar-network-wireless-signal-excellent.svg
+/usr/share/help/it/gnome-help/figures/classic-topbar-network-wireless-signal-none.svg
+/usr/share/help/it/gnome-help/figures/classic-topbar-network-wireless-signal.svg
 /usr/share/help/it/gnome-help/figures/classic-topbar-night-light.svg
 /usr/share/help/it/gnome-help/figures/classic-topbar-pointer.svg
 /usr/share/help/it/gnome-help/figures/classic-topbar-screen-shared.svg
@@ -8948,7 +8951,6 @@ popd
 /usr/share/help/it/gnome-help/figures/net-wired-ethernet-diagram.svg
 /usr/share/help/it/gnome-help/figures/network-wired-symbolic.svg
 /usr/share/help/it/gnome-help/figures/network-wireless-disabled-symbolic.svg
-/usr/share/help/it/gnome-help/figures/preferences-desktop-accessibility-symbolic.svg
 /usr/share/help/it/gnome-help/figures/printing-select.png
 /usr/share/help/it/gnome-help/figures/ps-button.svg
 /usr/share/help/it/gnome-help/figures/ps-create.svg
@@ -8956,8 +8958,6 @@ popd
 /usr/share/help/it/gnome-help/figures/rotation-locked-symbolic.svg
 /usr/share/help/it/gnome-help/figures/screenshot-tool.png
 /usr/share/help/it/gnome-help/figures/shell-activities-dash.png
-/usr/share/help/it/gnome-help/figures/shell-appmenu-classic.png
-/usr/share/help/it/gnome-help/figures/shell-appmenu-shell.png
 /usr/share/help/it/gnome-help/figures/shell-appts-classic.png
 /usr/share/help/it/gnome-help/figures/shell-appts.png
 /usr/share/help/it/gnome-help/figures/shell-exit-classic-expanded.png
@@ -9007,9 +9007,9 @@ popd
 /usr/share/help/it/gnome-help/figures/topbar-network-wireless-acquiring.svg
 /usr/share/help/it/gnome-help/figures/topbar-network-wireless-connected.svg
 /usr/share/help/it/gnome-help/figures/topbar-network-wireless-no-route.svg
-/usr/share/help/it/gnome-help/figures/topbar-network-wireless-strength-excellent.svg
-/usr/share/help/it/gnome-help/figures/topbar-network-wireless-strength-none.svg
-/usr/share/help/it/gnome-help/figures/topbar-network-wireless-strength.svg
+/usr/share/help/it/gnome-help/figures/topbar-network-wireless-signal-excellent.svg
+/usr/share/help/it/gnome-help/figures/topbar-network-wireless-signal-none.svg
+/usr/share/help/it/gnome-help/figures/topbar-network-wireless-signal.svg
 /usr/share/help/it/gnome-help/figures/topbar-night-light.svg
 /usr/share/help/it/gnome-help/figures/topbar-pointer.svg
 /usr/share/help/it/gnome-help/figures/topbar-screen-shared.svg
@@ -9055,7 +9055,7 @@ popd
 /usr/share/help/it/gnome-help/hardware-problems-graphics.page
 /usr/share/help/it/gnome-help/hardware.page
 /usr/share/help/it/gnome-help/help-irc.page
-/usr/share/help/it/gnome-help/help-mailing-list.page
+/usr/share/help/it/gnome-help/help-matrix.page
 /usr/share/help/it/gnome-help/index.page
 /usr/share/help/it/gnome-help/keyboard-cursor-blink.page
 /usr/share/help/it/gnome-help/keyboard-key-menu.page
@@ -9356,9 +9356,9 @@ popd
 /usr/share/help/ja/gnome-help/figures/classic-topbar-network-wireless-acquiring.svg
 /usr/share/help/ja/gnome-help/figures/classic-topbar-network-wireless-connected.svg
 /usr/share/help/ja/gnome-help/figures/classic-topbar-network-wireless-no-route.svg
-/usr/share/help/ja/gnome-help/figures/classic-topbar-network-wireless-strength-excellent.svg
-/usr/share/help/ja/gnome-help/figures/classic-topbar-network-wireless-strength-none.svg
-/usr/share/help/ja/gnome-help/figures/classic-topbar-network-wireless-strength.svg
+/usr/share/help/ja/gnome-help/figures/classic-topbar-network-wireless-signal-excellent.svg
+/usr/share/help/ja/gnome-help/figures/classic-topbar-network-wireless-signal-none.svg
+/usr/share/help/ja/gnome-help/figures/classic-topbar-network-wireless-signal.svg
 /usr/share/help/ja/gnome-help/figures/classic-topbar-night-light.svg
 /usr/share/help/ja/gnome-help/figures/classic-topbar-pointer.svg
 /usr/share/help/ja/gnome-help/figures/classic-topbar-screen-shared.svg
@@ -9399,7 +9399,6 @@ popd
 /usr/share/help/ja/gnome-help/figures/net-wired-ethernet-diagram.svg
 /usr/share/help/ja/gnome-help/figures/network-wired-symbolic.svg
 /usr/share/help/ja/gnome-help/figures/network-wireless-disabled-symbolic.svg
-/usr/share/help/ja/gnome-help/figures/preferences-desktop-accessibility-symbolic.svg
 /usr/share/help/ja/gnome-help/figures/printing-select.png
 /usr/share/help/ja/gnome-help/figures/ps-button.svg
 /usr/share/help/ja/gnome-help/figures/ps-create.svg
@@ -9407,8 +9406,6 @@ popd
 /usr/share/help/ja/gnome-help/figures/rotation-locked-symbolic.svg
 /usr/share/help/ja/gnome-help/figures/screenshot-tool.png
 /usr/share/help/ja/gnome-help/figures/shell-activities-dash.png
-/usr/share/help/ja/gnome-help/figures/shell-appmenu-classic.png
-/usr/share/help/ja/gnome-help/figures/shell-appmenu-shell.png
 /usr/share/help/ja/gnome-help/figures/shell-appts-classic.png
 /usr/share/help/ja/gnome-help/figures/shell-appts.png
 /usr/share/help/ja/gnome-help/figures/shell-exit-classic-expanded.png
@@ -9458,9 +9455,9 @@ popd
 /usr/share/help/ja/gnome-help/figures/topbar-network-wireless-acquiring.svg
 /usr/share/help/ja/gnome-help/figures/topbar-network-wireless-connected.svg
 /usr/share/help/ja/gnome-help/figures/topbar-network-wireless-no-route.svg
-/usr/share/help/ja/gnome-help/figures/topbar-network-wireless-strength-excellent.svg
-/usr/share/help/ja/gnome-help/figures/topbar-network-wireless-strength-none.svg
-/usr/share/help/ja/gnome-help/figures/topbar-network-wireless-strength.svg
+/usr/share/help/ja/gnome-help/figures/topbar-network-wireless-signal-excellent.svg
+/usr/share/help/ja/gnome-help/figures/topbar-network-wireless-signal-none.svg
+/usr/share/help/ja/gnome-help/figures/topbar-network-wireless-signal.svg
 /usr/share/help/ja/gnome-help/figures/topbar-night-light.svg
 /usr/share/help/ja/gnome-help/figures/topbar-pointer.svg
 /usr/share/help/ja/gnome-help/figures/topbar-screen-shared.svg
@@ -9506,7 +9503,7 @@ popd
 /usr/share/help/ja/gnome-help/hardware-problems-graphics.page
 /usr/share/help/ja/gnome-help/hardware.page
 /usr/share/help/ja/gnome-help/help-irc.page
-/usr/share/help/ja/gnome-help/help-mailing-list.page
+/usr/share/help/ja/gnome-help/help-matrix.page
 /usr/share/help/ja/gnome-help/index.page
 /usr/share/help/ja/gnome-help/keyboard-cursor-blink.page
 /usr/share/help/ja/gnome-help/keyboard-key-menu.page
@@ -9807,9 +9804,9 @@ popd
 /usr/share/help/kn/gnome-help/figures/classic-topbar-network-wireless-acquiring.svg
 /usr/share/help/kn/gnome-help/figures/classic-topbar-network-wireless-connected.svg
 /usr/share/help/kn/gnome-help/figures/classic-topbar-network-wireless-no-route.svg
-/usr/share/help/kn/gnome-help/figures/classic-topbar-network-wireless-strength-excellent.svg
-/usr/share/help/kn/gnome-help/figures/classic-topbar-network-wireless-strength-none.svg
-/usr/share/help/kn/gnome-help/figures/classic-topbar-network-wireless-strength.svg
+/usr/share/help/kn/gnome-help/figures/classic-topbar-network-wireless-signal-excellent.svg
+/usr/share/help/kn/gnome-help/figures/classic-topbar-network-wireless-signal-none.svg
+/usr/share/help/kn/gnome-help/figures/classic-topbar-network-wireless-signal.svg
 /usr/share/help/kn/gnome-help/figures/classic-topbar-night-light.svg
 /usr/share/help/kn/gnome-help/figures/classic-topbar-pointer.svg
 /usr/share/help/kn/gnome-help/figures/classic-topbar-screen-shared.svg
@@ -9850,7 +9847,6 @@ popd
 /usr/share/help/kn/gnome-help/figures/net-wired-ethernet-diagram.svg
 /usr/share/help/kn/gnome-help/figures/network-wired-symbolic.svg
 /usr/share/help/kn/gnome-help/figures/network-wireless-disabled-symbolic.svg
-/usr/share/help/kn/gnome-help/figures/preferences-desktop-accessibility-symbolic.svg
 /usr/share/help/kn/gnome-help/figures/printing-select.png
 /usr/share/help/kn/gnome-help/figures/ps-button.svg
 /usr/share/help/kn/gnome-help/figures/ps-create.svg
@@ -9858,8 +9854,6 @@ popd
 /usr/share/help/kn/gnome-help/figures/rotation-locked-symbolic.svg
 /usr/share/help/kn/gnome-help/figures/screenshot-tool.png
 /usr/share/help/kn/gnome-help/figures/shell-activities-dash.png
-/usr/share/help/kn/gnome-help/figures/shell-appmenu-classic.png
-/usr/share/help/kn/gnome-help/figures/shell-appmenu-shell.png
 /usr/share/help/kn/gnome-help/figures/shell-appts-classic.png
 /usr/share/help/kn/gnome-help/figures/shell-appts.png
 /usr/share/help/kn/gnome-help/figures/shell-exit-classic-expanded.png
@@ -9909,9 +9903,9 @@ popd
 /usr/share/help/kn/gnome-help/figures/topbar-network-wireless-acquiring.svg
 /usr/share/help/kn/gnome-help/figures/topbar-network-wireless-connected.svg
 /usr/share/help/kn/gnome-help/figures/topbar-network-wireless-no-route.svg
-/usr/share/help/kn/gnome-help/figures/topbar-network-wireless-strength-excellent.svg
-/usr/share/help/kn/gnome-help/figures/topbar-network-wireless-strength-none.svg
-/usr/share/help/kn/gnome-help/figures/topbar-network-wireless-strength.svg
+/usr/share/help/kn/gnome-help/figures/topbar-network-wireless-signal-excellent.svg
+/usr/share/help/kn/gnome-help/figures/topbar-network-wireless-signal-none.svg
+/usr/share/help/kn/gnome-help/figures/topbar-network-wireless-signal.svg
 /usr/share/help/kn/gnome-help/figures/topbar-night-light.svg
 /usr/share/help/kn/gnome-help/figures/topbar-pointer.svg
 /usr/share/help/kn/gnome-help/figures/topbar-screen-shared.svg
@@ -9957,7 +9951,7 @@ popd
 /usr/share/help/kn/gnome-help/hardware-problems-graphics.page
 /usr/share/help/kn/gnome-help/hardware.page
 /usr/share/help/kn/gnome-help/help-irc.page
-/usr/share/help/kn/gnome-help/help-mailing-list.page
+/usr/share/help/kn/gnome-help/help-matrix.page
 /usr/share/help/kn/gnome-help/index.page
 /usr/share/help/kn/gnome-help/keyboard-cursor-blink.page
 /usr/share/help/kn/gnome-help/keyboard-key-menu.page
@@ -10258,9 +10252,9 @@ popd
 /usr/share/help/ko/gnome-help/figures/classic-topbar-network-wireless-acquiring.svg
 /usr/share/help/ko/gnome-help/figures/classic-topbar-network-wireless-connected.svg
 /usr/share/help/ko/gnome-help/figures/classic-topbar-network-wireless-no-route.svg
-/usr/share/help/ko/gnome-help/figures/classic-topbar-network-wireless-strength-excellent.svg
-/usr/share/help/ko/gnome-help/figures/classic-topbar-network-wireless-strength-none.svg
-/usr/share/help/ko/gnome-help/figures/classic-topbar-network-wireless-strength.svg
+/usr/share/help/ko/gnome-help/figures/classic-topbar-network-wireless-signal-excellent.svg
+/usr/share/help/ko/gnome-help/figures/classic-topbar-network-wireless-signal-none.svg
+/usr/share/help/ko/gnome-help/figures/classic-topbar-network-wireless-signal.svg
 /usr/share/help/ko/gnome-help/figures/classic-topbar-night-light.svg
 /usr/share/help/ko/gnome-help/figures/classic-topbar-pointer.svg
 /usr/share/help/ko/gnome-help/figures/classic-topbar-screen-shared.svg
@@ -10301,7 +10295,6 @@ popd
 /usr/share/help/ko/gnome-help/figures/net-wired-ethernet-diagram.svg
 /usr/share/help/ko/gnome-help/figures/network-wired-symbolic.svg
 /usr/share/help/ko/gnome-help/figures/network-wireless-disabled-symbolic.svg
-/usr/share/help/ko/gnome-help/figures/preferences-desktop-accessibility-symbolic.svg
 /usr/share/help/ko/gnome-help/figures/printing-select.png
 /usr/share/help/ko/gnome-help/figures/ps-button.svg
 /usr/share/help/ko/gnome-help/figures/ps-create.svg
@@ -10309,8 +10302,6 @@ popd
 /usr/share/help/ko/gnome-help/figures/rotation-locked-symbolic.svg
 /usr/share/help/ko/gnome-help/figures/screenshot-tool.png
 /usr/share/help/ko/gnome-help/figures/shell-activities-dash.png
-/usr/share/help/ko/gnome-help/figures/shell-appmenu-classic.png
-/usr/share/help/ko/gnome-help/figures/shell-appmenu-shell.png
 /usr/share/help/ko/gnome-help/figures/shell-appts-classic.png
 /usr/share/help/ko/gnome-help/figures/shell-appts.png
 /usr/share/help/ko/gnome-help/figures/shell-exit-classic-expanded.png
@@ -10360,9 +10351,9 @@ popd
 /usr/share/help/ko/gnome-help/figures/topbar-network-wireless-acquiring.svg
 /usr/share/help/ko/gnome-help/figures/topbar-network-wireless-connected.svg
 /usr/share/help/ko/gnome-help/figures/topbar-network-wireless-no-route.svg
-/usr/share/help/ko/gnome-help/figures/topbar-network-wireless-strength-excellent.svg
-/usr/share/help/ko/gnome-help/figures/topbar-network-wireless-strength-none.svg
-/usr/share/help/ko/gnome-help/figures/topbar-network-wireless-strength.svg
+/usr/share/help/ko/gnome-help/figures/topbar-network-wireless-signal-excellent.svg
+/usr/share/help/ko/gnome-help/figures/topbar-network-wireless-signal-none.svg
+/usr/share/help/ko/gnome-help/figures/topbar-network-wireless-signal.svg
 /usr/share/help/ko/gnome-help/figures/topbar-night-light.svg
 /usr/share/help/ko/gnome-help/figures/topbar-pointer.svg
 /usr/share/help/ko/gnome-help/figures/topbar-screen-shared.svg
@@ -10408,7 +10399,7 @@ popd
 /usr/share/help/ko/gnome-help/hardware-problems-graphics.page
 /usr/share/help/ko/gnome-help/hardware.page
 /usr/share/help/ko/gnome-help/help-irc.page
-/usr/share/help/ko/gnome-help/help-mailing-list.page
+/usr/share/help/ko/gnome-help/help-matrix.page
 /usr/share/help/ko/gnome-help/index.page
 /usr/share/help/ko/gnome-help/keyboard-cursor-blink.page
 /usr/share/help/ko/gnome-help/keyboard-key-menu.page
@@ -10766,9 +10757,9 @@ popd
 /usr/share/help/lt/gnome-help/figures/classic-topbar-network-wireless-acquiring.svg
 /usr/share/help/lt/gnome-help/figures/classic-topbar-network-wireless-connected.svg
 /usr/share/help/lt/gnome-help/figures/classic-topbar-network-wireless-no-route.svg
-/usr/share/help/lt/gnome-help/figures/classic-topbar-network-wireless-strength-excellent.svg
-/usr/share/help/lt/gnome-help/figures/classic-topbar-network-wireless-strength-none.svg
-/usr/share/help/lt/gnome-help/figures/classic-topbar-network-wireless-strength.svg
+/usr/share/help/lt/gnome-help/figures/classic-topbar-network-wireless-signal-excellent.svg
+/usr/share/help/lt/gnome-help/figures/classic-topbar-network-wireless-signal-none.svg
+/usr/share/help/lt/gnome-help/figures/classic-topbar-network-wireless-signal.svg
 /usr/share/help/lt/gnome-help/figures/classic-topbar-night-light.svg
 /usr/share/help/lt/gnome-help/figures/classic-topbar-pointer.svg
 /usr/share/help/lt/gnome-help/figures/classic-topbar-screen-shared.svg
@@ -10809,7 +10800,6 @@ popd
 /usr/share/help/lt/gnome-help/figures/net-wired-ethernet-diagram.svg
 /usr/share/help/lt/gnome-help/figures/network-wired-symbolic.svg
 /usr/share/help/lt/gnome-help/figures/network-wireless-disabled-symbolic.svg
-/usr/share/help/lt/gnome-help/figures/preferences-desktop-accessibility-symbolic.svg
 /usr/share/help/lt/gnome-help/figures/printing-select.png
 /usr/share/help/lt/gnome-help/figures/ps-button.svg
 /usr/share/help/lt/gnome-help/figures/ps-create.svg
@@ -10817,8 +10807,6 @@ popd
 /usr/share/help/lt/gnome-help/figures/rotation-locked-symbolic.svg
 /usr/share/help/lt/gnome-help/figures/screenshot-tool.png
 /usr/share/help/lt/gnome-help/figures/shell-activities-dash.png
-/usr/share/help/lt/gnome-help/figures/shell-appmenu-classic.png
-/usr/share/help/lt/gnome-help/figures/shell-appmenu-shell.png
 /usr/share/help/lt/gnome-help/figures/shell-appts-classic.png
 /usr/share/help/lt/gnome-help/figures/shell-appts.png
 /usr/share/help/lt/gnome-help/figures/shell-exit-classic-expanded.png
@@ -10868,9 +10856,9 @@ popd
 /usr/share/help/lt/gnome-help/figures/topbar-network-wireless-acquiring.svg
 /usr/share/help/lt/gnome-help/figures/topbar-network-wireless-connected.svg
 /usr/share/help/lt/gnome-help/figures/topbar-network-wireless-no-route.svg
-/usr/share/help/lt/gnome-help/figures/topbar-network-wireless-strength-excellent.svg
-/usr/share/help/lt/gnome-help/figures/topbar-network-wireless-strength-none.svg
-/usr/share/help/lt/gnome-help/figures/topbar-network-wireless-strength.svg
+/usr/share/help/lt/gnome-help/figures/topbar-network-wireless-signal-excellent.svg
+/usr/share/help/lt/gnome-help/figures/topbar-network-wireless-signal-none.svg
+/usr/share/help/lt/gnome-help/figures/topbar-network-wireless-signal.svg
 /usr/share/help/lt/gnome-help/figures/topbar-night-light.svg
 /usr/share/help/lt/gnome-help/figures/topbar-pointer.svg
 /usr/share/help/lt/gnome-help/figures/topbar-screen-shared.svg
@@ -10916,7 +10904,7 @@ popd
 /usr/share/help/lt/gnome-help/hardware-problems-graphics.page
 /usr/share/help/lt/gnome-help/hardware.page
 /usr/share/help/lt/gnome-help/help-irc.page
-/usr/share/help/lt/gnome-help/help-mailing-list.page
+/usr/share/help/lt/gnome-help/help-matrix.page
 /usr/share/help/lt/gnome-help/index.page
 /usr/share/help/lt/gnome-help/keyboard-cursor-blink.page
 /usr/share/help/lt/gnome-help/keyboard-key-menu.page
@@ -11217,9 +11205,9 @@ popd
 /usr/share/help/lv/gnome-help/figures/classic-topbar-network-wireless-acquiring.svg
 /usr/share/help/lv/gnome-help/figures/classic-topbar-network-wireless-connected.svg
 /usr/share/help/lv/gnome-help/figures/classic-topbar-network-wireless-no-route.svg
-/usr/share/help/lv/gnome-help/figures/classic-topbar-network-wireless-strength-excellent.svg
-/usr/share/help/lv/gnome-help/figures/classic-topbar-network-wireless-strength-none.svg
-/usr/share/help/lv/gnome-help/figures/classic-topbar-network-wireless-strength.svg
+/usr/share/help/lv/gnome-help/figures/classic-topbar-network-wireless-signal-excellent.svg
+/usr/share/help/lv/gnome-help/figures/classic-topbar-network-wireless-signal-none.svg
+/usr/share/help/lv/gnome-help/figures/classic-topbar-network-wireless-signal.svg
 /usr/share/help/lv/gnome-help/figures/classic-topbar-night-light.svg
 /usr/share/help/lv/gnome-help/figures/classic-topbar-pointer.svg
 /usr/share/help/lv/gnome-help/figures/classic-topbar-screen-shared.svg
@@ -11260,7 +11248,6 @@ popd
 /usr/share/help/lv/gnome-help/figures/net-wired-ethernet-diagram.svg
 /usr/share/help/lv/gnome-help/figures/network-wired-symbolic.svg
 /usr/share/help/lv/gnome-help/figures/network-wireless-disabled-symbolic.svg
-/usr/share/help/lv/gnome-help/figures/preferences-desktop-accessibility-symbolic.svg
 /usr/share/help/lv/gnome-help/figures/printing-select.png
 /usr/share/help/lv/gnome-help/figures/ps-button.svg
 /usr/share/help/lv/gnome-help/figures/ps-create.svg
@@ -11268,8 +11255,6 @@ popd
 /usr/share/help/lv/gnome-help/figures/rotation-locked-symbolic.svg
 /usr/share/help/lv/gnome-help/figures/screenshot-tool.png
 /usr/share/help/lv/gnome-help/figures/shell-activities-dash.png
-/usr/share/help/lv/gnome-help/figures/shell-appmenu-classic.png
-/usr/share/help/lv/gnome-help/figures/shell-appmenu-shell.png
 /usr/share/help/lv/gnome-help/figures/shell-appts-classic.png
 /usr/share/help/lv/gnome-help/figures/shell-appts.png
 /usr/share/help/lv/gnome-help/figures/shell-exit-classic-expanded.png
@@ -11319,9 +11304,9 @@ popd
 /usr/share/help/lv/gnome-help/figures/topbar-network-wireless-acquiring.svg
 /usr/share/help/lv/gnome-help/figures/topbar-network-wireless-connected.svg
 /usr/share/help/lv/gnome-help/figures/topbar-network-wireless-no-route.svg
-/usr/share/help/lv/gnome-help/figures/topbar-network-wireless-strength-excellent.svg
-/usr/share/help/lv/gnome-help/figures/topbar-network-wireless-strength-none.svg
-/usr/share/help/lv/gnome-help/figures/topbar-network-wireless-strength.svg
+/usr/share/help/lv/gnome-help/figures/topbar-network-wireless-signal-excellent.svg
+/usr/share/help/lv/gnome-help/figures/topbar-network-wireless-signal-none.svg
+/usr/share/help/lv/gnome-help/figures/topbar-network-wireless-signal.svg
 /usr/share/help/lv/gnome-help/figures/topbar-night-light.svg
 /usr/share/help/lv/gnome-help/figures/topbar-pointer.svg
 /usr/share/help/lv/gnome-help/figures/topbar-screen-shared.svg
@@ -11367,7 +11352,7 @@ popd
 /usr/share/help/lv/gnome-help/hardware-problems-graphics.page
 /usr/share/help/lv/gnome-help/hardware.page
 /usr/share/help/lv/gnome-help/help-irc.page
-/usr/share/help/lv/gnome-help/help-mailing-list.page
+/usr/share/help/lv/gnome-help/help-matrix.page
 /usr/share/help/lv/gnome-help/index.page
 /usr/share/help/lv/gnome-help/keyboard-cursor-blink.page
 /usr/share/help/lv/gnome-help/keyboard-key-menu.page
@@ -11668,9 +11653,9 @@ popd
 /usr/share/help/mr/gnome-help/figures/classic-topbar-network-wireless-acquiring.svg
 /usr/share/help/mr/gnome-help/figures/classic-topbar-network-wireless-connected.svg
 /usr/share/help/mr/gnome-help/figures/classic-topbar-network-wireless-no-route.svg
-/usr/share/help/mr/gnome-help/figures/classic-topbar-network-wireless-strength-excellent.svg
-/usr/share/help/mr/gnome-help/figures/classic-topbar-network-wireless-strength-none.svg
-/usr/share/help/mr/gnome-help/figures/classic-topbar-network-wireless-strength.svg
+/usr/share/help/mr/gnome-help/figures/classic-topbar-network-wireless-signal-excellent.svg
+/usr/share/help/mr/gnome-help/figures/classic-topbar-network-wireless-signal-none.svg
+/usr/share/help/mr/gnome-help/figures/classic-topbar-network-wireless-signal.svg
 /usr/share/help/mr/gnome-help/figures/classic-topbar-night-light.svg
 /usr/share/help/mr/gnome-help/figures/classic-topbar-pointer.svg
 /usr/share/help/mr/gnome-help/figures/classic-topbar-screen-shared.svg
@@ -11711,7 +11696,6 @@ popd
 /usr/share/help/mr/gnome-help/figures/net-wired-ethernet-diagram.svg
 /usr/share/help/mr/gnome-help/figures/network-wired-symbolic.svg
 /usr/share/help/mr/gnome-help/figures/network-wireless-disabled-symbolic.svg
-/usr/share/help/mr/gnome-help/figures/preferences-desktop-accessibility-symbolic.svg
 /usr/share/help/mr/gnome-help/figures/printing-select.png
 /usr/share/help/mr/gnome-help/figures/ps-button.svg
 /usr/share/help/mr/gnome-help/figures/ps-create.svg
@@ -11719,8 +11703,6 @@ popd
 /usr/share/help/mr/gnome-help/figures/rotation-locked-symbolic.svg
 /usr/share/help/mr/gnome-help/figures/screenshot-tool.png
 /usr/share/help/mr/gnome-help/figures/shell-activities-dash.png
-/usr/share/help/mr/gnome-help/figures/shell-appmenu-classic.png
-/usr/share/help/mr/gnome-help/figures/shell-appmenu-shell.png
 /usr/share/help/mr/gnome-help/figures/shell-appts-classic.png
 /usr/share/help/mr/gnome-help/figures/shell-appts.png
 /usr/share/help/mr/gnome-help/figures/shell-exit-classic-expanded.png
@@ -11770,9 +11752,9 @@ popd
 /usr/share/help/mr/gnome-help/figures/topbar-network-wireless-acquiring.svg
 /usr/share/help/mr/gnome-help/figures/topbar-network-wireless-connected.svg
 /usr/share/help/mr/gnome-help/figures/topbar-network-wireless-no-route.svg
-/usr/share/help/mr/gnome-help/figures/topbar-network-wireless-strength-excellent.svg
-/usr/share/help/mr/gnome-help/figures/topbar-network-wireless-strength-none.svg
-/usr/share/help/mr/gnome-help/figures/topbar-network-wireless-strength.svg
+/usr/share/help/mr/gnome-help/figures/topbar-network-wireless-signal-excellent.svg
+/usr/share/help/mr/gnome-help/figures/topbar-network-wireless-signal-none.svg
+/usr/share/help/mr/gnome-help/figures/topbar-network-wireless-signal.svg
 /usr/share/help/mr/gnome-help/figures/topbar-night-light.svg
 /usr/share/help/mr/gnome-help/figures/topbar-pointer.svg
 /usr/share/help/mr/gnome-help/figures/topbar-screen-shared.svg
@@ -11818,7 +11800,7 @@ popd
 /usr/share/help/mr/gnome-help/hardware-problems-graphics.page
 /usr/share/help/mr/gnome-help/hardware.page
 /usr/share/help/mr/gnome-help/help-irc.page
-/usr/share/help/mr/gnome-help/help-mailing-list.page
+/usr/share/help/mr/gnome-help/help-matrix.page
 /usr/share/help/mr/gnome-help/index.page
 /usr/share/help/mr/gnome-help/keyboard-cursor-blink.page
 /usr/share/help/mr/gnome-help/keyboard-key-menu.page
@@ -12119,9 +12101,9 @@ popd
 /usr/share/help/nl/gnome-help/figures/classic-topbar-network-wireless-acquiring.svg
 /usr/share/help/nl/gnome-help/figures/classic-topbar-network-wireless-connected.svg
 /usr/share/help/nl/gnome-help/figures/classic-topbar-network-wireless-no-route.svg
-/usr/share/help/nl/gnome-help/figures/classic-topbar-network-wireless-strength-excellent.svg
-/usr/share/help/nl/gnome-help/figures/classic-topbar-network-wireless-strength-none.svg
-/usr/share/help/nl/gnome-help/figures/classic-topbar-network-wireless-strength.svg
+/usr/share/help/nl/gnome-help/figures/classic-topbar-network-wireless-signal-excellent.svg
+/usr/share/help/nl/gnome-help/figures/classic-topbar-network-wireless-signal-none.svg
+/usr/share/help/nl/gnome-help/figures/classic-topbar-network-wireless-signal.svg
 /usr/share/help/nl/gnome-help/figures/classic-topbar-night-light.svg
 /usr/share/help/nl/gnome-help/figures/classic-topbar-pointer.svg
 /usr/share/help/nl/gnome-help/figures/classic-topbar-screen-shared.svg
@@ -12162,7 +12144,6 @@ popd
 /usr/share/help/nl/gnome-help/figures/net-wired-ethernet-diagram.svg
 /usr/share/help/nl/gnome-help/figures/network-wired-symbolic.svg
 /usr/share/help/nl/gnome-help/figures/network-wireless-disabled-symbolic.svg
-/usr/share/help/nl/gnome-help/figures/preferences-desktop-accessibility-symbolic.svg
 /usr/share/help/nl/gnome-help/figures/printing-select.png
 /usr/share/help/nl/gnome-help/figures/ps-button.svg
 /usr/share/help/nl/gnome-help/figures/ps-create.svg
@@ -12170,8 +12151,6 @@ popd
 /usr/share/help/nl/gnome-help/figures/rotation-locked-symbolic.svg
 /usr/share/help/nl/gnome-help/figures/screenshot-tool.png
 /usr/share/help/nl/gnome-help/figures/shell-activities-dash.png
-/usr/share/help/nl/gnome-help/figures/shell-appmenu-classic.png
-/usr/share/help/nl/gnome-help/figures/shell-appmenu-shell.png
 /usr/share/help/nl/gnome-help/figures/shell-appts-classic.png
 /usr/share/help/nl/gnome-help/figures/shell-appts.png
 /usr/share/help/nl/gnome-help/figures/shell-exit-classic-expanded.png
@@ -12221,9 +12200,9 @@ popd
 /usr/share/help/nl/gnome-help/figures/topbar-network-wireless-acquiring.svg
 /usr/share/help/nl/gnome-help/figures/topbar-network-wireless-connected.svg
 /usr/share/help/nl/gnome-help/figures/topbar-network-wireless-no-route.svg
-/usr/share/help/nl/gnome-help/figures/topbar-network-wireless-strength-excellent.svg
-/usr/share/help/nl/gnome-help/figures/topbar-network-wireless-strength-none.svg
-/usr/share/help/nl/gnome-help/figures/topbar-network-wireless-strength.svg
+/usr/share/help/nl/gnome-help/figures/topbar-network-wireless-signal-excellent.svg
+/usr/share/help/nl/gnome-help/figures/topbar-network-wireless-signal-none.svg
+/usr/share/help/nl/gnome-help/figures/topbar-network-wireless-signal.svg
 /usr/share/help/nl/gnome-help/figures/topbar-night-light.svg
 /usr/share/help/nl/gnome-help/figures/topbar-pointer.svg
 /usr/share/help/nl/gnome-help/figures/topbar-screen-shared.svg
@@ -12269,7 +12248,7 @@ popd
 /usr/share/help/nl/gnome-help/hardware-problems-graphics.page
 /usr/share/help/nl/gnome-help/hardware.page
 /usr/share/help/nl/gnome-help/help-irc.page
-/usr/share/help/nl/gnome-help/help-mailing-list.page
+/usr/share/help/nl/gnome-help/help-matrix.page
 /usr/share/help/nl/gnome-help/index.page
 /usr/share/help/nl/gnome-help/keyboard-cursor-blink.page
 /usr/share/help/nl/gnome-help/keyboard-key-menu.page
@@ -12627,9 +12606,9 @@ popd
 /usr/share/help/pa/gnome-help/figures/classic-topbar-network-wireless-acquiring.svg
 /usr/share/help/pa/gnome-help/figures/classic-topbar-network-wireless-connected.svg
 /usr/share/help/pa/gnome-help/figures/classic-topbar-network-wireless-no-route.svg
-/usr/share/help/pa/gnome-help/figures/classic-topbar-network-wireless-strength-excellent.svg
-/usr/share/help/pa/gnome-help/figures/classic-topbar-network-wireless-strength-none.svg
-/usr/share/help/pa/gnome-help/figures/classic-topbar-network-wireless-strength.svg
+/usr/share/help/pa/gnome-help/figures/classic-topbar-network-wireless-signal-excellent.svg
+/usr/share/help/pa/gnome-help/figures/classic-topbar-network-wireless-signal-none.svg
+/usr/share/help/pa/gnome-help/figures/classic-topbar-network-wireless-signal.svg
 /usr/share/help/pa/gnome-help/figures/classic-topbar-night-light.svg
 /usr/share/help/pa/gnome-help/figures/classic-topbar-pointer.svg
 /usr/share/help/pa/gnome-help/figures/classic-topbar-screen-shared.svg
@@ -12670,7 +12649,6 @@ popd
 /usr/share/help/pa/gnome-help/figures/net-wired-ethernet-diagram.svg
 /usr/share/help/pa/gnome-help/figures/network-wired-symbolic.svg
 /usr/share/help/pa/gnome-help/figures/network-wireless-disabled-symbolic.svg
-/usr/share/help/pa/gnome-help/figures/preferences-desktop-accessibility-symbolic.svg
 /usr/share/help/pa/gnome-help/figures/printing-select.png
 /usr/share/help/pa/gnome-help/figures/ps-button.svg
 /usr/share/help/pa/gnome-help/figures/ps-create.svg
@@ -12678,8 +12656,6 @@ popd
 /usr/share/help/pa/gnome-help/figures/rotation-locked-symbolic.svg
 /usr/share/help/pa/gnome-help/figures/screenshot-tool.png
 /usr/share/help/pa/gnome-help/figures/shell-activities-dash.png
-/usr/share/help/pa/gnome-help/figures/shell-appmenu-classic.png
-/usr/share/help/pa/gnome-help/figures/shell-appmenu-shell.png
 /usr/share/help/pa/gnome-help/figures/shell-appts-classic.png
 /usr/share/help/pa/gnome-help/figures/shell-appts.png
 /usr/share/help/pa/gnome-help/figures/shell-exit-classic-expanded.png
@@ -12729,9 +12705,9 @@ popd
 /usr/share/help/pa/gnome-help/figures/topbar-network-wireless-acquiring.svg
 /usr/share/help/pa/gnome-help/figures/topbar-network-wireless-connected.svg
 /usr/share/help/pa/gnome-help/figures/topbar-network-wireless-no-route.svg
-/usr/share/help/pa/gnome-help/figures/topbar-network-wireless-strength-excellent.svg
-/usr/share/help/pa/gnome-help/figures/topbar-network-wireless-strength-none.svg
-/usr/share/help/pa/gnome-help/figures/topbar-network-wireless-strength.svg
+/usr/share/help/pa/gnome-help/figures/topbar-network-wireless-signal-excellent.svg
+/usr/share/help/pa/gnome-help/figures/topbar-network-wireless-signal-none.svg
+/usr/share/help/pa/gnome-help/figures/topbar-network-wireless-signal.svg
 /usr/share/help/pa/gnome-help/figures/topbar-night-light.svg
 /usr/share/help/pa/gnome-help/figures/topbar-pointer.svg
 /usr/share/help/pa/gnome-help/figures/topbar-screen-shared.svg
@@ -12777,7 +12753,7 @@ popd
 /usr/share/help/pa/gnome-help/hardware-problems-graphics.page
 /usr/share/help/pa/gnome-help/hardware.page
 /usr/share/help/pa/gnome-help/help-irc.page
-/usr/share/help/pa/gnome-help/help-mailing-list.page
+/usr/share/help/pa/gnome-help/help-matrix.page
 /usr/share/help/pa/gnome-help/index.page
 /usr/share/help/pa/gnome-help/keyboard-cursor-blink.page
 /usr/share/help/pa/gnome-help/keyboard-key-menu.page
@@ -13078,9 +13054,9 @@ popd
 /usr/share/help/pl/gnome-help/figures/classic-topbar-network-wireless-acquiring.svg
 /usr/share/help/pl/gnome-help/figures/classic-topbar-network-wireless-connected.svg
 /usr/share/help/pl/gnome-help/figures/classic-topbar-network-wireless-no-route.svg
-/usr/share/help/pl/gnome-help/figures/classic-topbar-network-wireless-strength-excellent.svg
-/usr/share/help/pl/gnome-help/figures/classic-topbar-network-wireless-strength-none.svg
-/usr/share/help/pl/gnome-help/figures/classic-topbar-network-wireless-strength.svg
+/usr/share/help/pl/gnome-help/figures/classic-topbar-network-wireless-signal-excellent.svg
+/usr/share/help/pl/gnome-help/figures/classic-topbar-network-wireless-signal-none.svg
+/usr/share/help/pl/gnome-help/figures/classic-topbar-network-wireless-signal.svg
 /usr/share/help/pl/gnome-help/figures/classic-topbar-night-light.svg
 /usr/share/help/pl/gnome-help/figures/classic-topbar-pointer.svg
 /usr/share/help/pl/gnome-help/figures/classic-topbar-screen-shared.svg
@@ -13121,7 +13097,6 @@ popd
 /usr/share/help/pl/gnome-help/figures/net-wired-ethernet-diagram.svg
 /usr/share/help/pl/gnome-help/figures/network-wired-symbolic.svg
 /usr/share/help/pl/gnome-help/figures/network-wireless-disabled-symbolic.svg
-/usr/share/help/pl/gnome-help/figures/preferences-desktop-accessibility-symbolic.svg
 /usr/share/help/pl/gnome-help/figures/printing-select.png
 /usr/share/help/pl/gnome-help/figures/ps-button.svg
 /usr/share/help/pl/gnome-help/figures/ps-create.svg
@@ -13129,8 +13104,6 @@ popd
 /usr/share/help/pl/gnome-help/figures/rotation-locked-symbolic.svg
 /usr/share/help/pl/gnome-help/figures/screenshot-tool.png
 /usr/share/help/pl/gnome-help/figures/shell-activities-dash.png
-/usr/share/help/pl/gnome-help/figures/shell-appmenu-classic.png
-/usr/share/help/pl/gnome-help/figures/shell-appmenu-shell.png
 /usr/share/help/pl/gnome-help/figures/shell-appts-classic.png
 /usr/share/help/pl/gnome-help/figures/shell-appts.png
 /usr/share/help/pl/gnome-help/figures/shell-exit-classic-expanded.png
@@ -13180,9 +13153,9 @@ popd
 /usr/share/help/pl/gnome-help/figures/topbar-network-wireless-acquiring.svg
 /usr/share/help/pl/gnome-help/figures/topbar-network-wireless-connected.svg
 /usr/share/help/pl/gnome-help/figures/topbar-network-wireless-no-route.svg
-/usr/share/help/pl/gnome-help/figures/topbar-network-wireless-strength-excellent.svg
-/usr/share/help/pl/gnome-help/figures/topbar-network-wireless-strength-none.svg
-/usr/share/help/pl/gnome-help/figures/topbar-network-wireless-strength.svg
+/usr/share/help/pl/gnome-help/figures/topbar-network-wireless-signal-excellent.svg
+/usr/share/help/pl/gnome-help/figures/topbar-network-wireless-signal-none.svg
+/usr/share/help/pl/gnome-help/figures/topbar-network-wireless-signal.svg
 /usr/share/help/pl/gnome-help/figures/topbar-night-light.svg
 /usr/share/help/pl/gnome-help/figures/topbar-pointer.svg
 /usr/share/help/pl/gnome-help/figures/topbar-screen-shared.svg
@@ -13228,7 +13201,7 @@ popd
 /usr/share/help/pl/gnome-help/hardware-problems-graphics.page
 /usr/share/help/pl/gnome-help/hardware.page
 /usr/share/help/pl/gnome-help/help-irc.page
-/usr/share/help/pl/gnome-help/help-mailing-list.page
+/usr/share/help/pl/gnome-help/help-matrix.page
 /usr/share/help/pl/gnome-help/index.page
 /usr/share/help/pl/gnome-help/keyboard-cursor-blink.page
 /usr/share/help/pl/gnome-help/keyboard-key-menu.page
@@ -13529,9 +13502,9 @@ popd
 /usr/share/help/pt/gnome-help/figures/classic-topbar-network-wireless-acquiring.svg
 /usr/share/help/pt/gnome-help/figures/classic-topbar-network-wireless-connected.svg
 /usr/share/help/pt/gnome-help/figures/classic-topbar-network-wireless-no-route.svg
-/usr/share/help/pt/gnome-help/figures/classic-topbar-network-wireless-strength-excellent.svg
-/usr/share/help/pt/gnome-help/figures/classic-topbar-network-wireless-strength-none.svg
-/usr/share/help/pt/gnome-help/figures/classic-topbar-network-wireless-strength.svg
+/usr/share/help/pt/gnome-help/figures/classic-topbar-network-wireless-signal-excellent.svg
+/usr/share/help/pt/gnome-help/figures/classic-topbar-network-wireless-signal-none.svg
+/usr/share/help/pt/gnome-help/figures/classic-topbar-network-wireless-signal.svg
 /usr/share/help/pt/gnome-help/figures/classic-topbar-night-light.svg
 /usr/share/help/pt/gnome-help/figures/classic-topbar-pointer.svg
 /usr/share/help/pt/gnome-help/figures/classic-topbar-screen-shared.svg
@@ -13572,7 +13545,6 @@ popd
 /usr/share/help/pt/gnome-help/figures/net-wired-ethernet-diagram.svg
 /usr/share/help/pt/gnome-help/figures/network-wired-symbolic.svg
 /usr/share/help/pt/gnome-help/figures/network-wireless-disabled-symbolic.svg
-/usr/share/help/pt/gnome-help/figures/preferences-desktop-accessibility-symbolic.svg
 /usr/share/help/pt/gnome-help/figures/printing-select.png
 /usr/share/help/pt/gnome-help/figures/ps-button.svg
 /usr/share/help/pt/gnome-help/figures/ps-create.svg
@@ -13580,8 +13552,6 @@ popd
 /usr/share/help/pt/gnome-help/figures/rotation-locked-symbolic.svg
 /usr/share/help/pt/gnome-help/figures/screenshot-tool.png
 /usr/share/help/pt/gnome-help/figures/shell-activities-dash.png
-/usr/share/help/pt/gnome-help/figures/shell-appmenu-classic.png
-/usr/share/help/pt/gnome-help/figures/shell-appmenu-shell.png
 /usr/share/help/pt/gnome-help/figures/shell-appts-classic.png
 /usr/share/help/pt/gnome-help/figures/shell-appts.png
 /usr/share/help/pt/gnome-help/figures/shell-exit-classic-expanded.png
@@ -13631,9 +13601,9 @@ popd
 /usr/share/help/pt/gnome-help/figures/topbar-network-wireless-acquiring.svg
 /usr/share/help/pt/gnome-help/figures/topbar-network-wireless-connected.svg
 /usr/share/help/pt/gnome-help/figures/topbar-network-wireless-no-route.svg
-/usr/share/help/pt/gnome-help/figures/topbar-network-wireless-strength-excellent.svg
-/usr/share/help/pt/gnome-help/figures/topbar-network-wireless-strength-none.svg
-/usr/share/help/pt/gnome-help/figures/topbar-network-wireless-strength.svg
+/usr/share/help/pt/gnome-help/figures/topbar-network-wireless-signal-excellent.svg
+/usr/share/help/pt/gnome-help/figures/topbar-network-wireless-signal-none.svg
+/usr/share/help/pt/gnome-help/figures/topbar-network-wireless-signal.svg
 /usr/share/help/pt/gnome-help/figures/topbar-night-light.svg
 /usr/share/help/pt/gnome-help/figures/topbar-pointer.svg
 /usr/share/help/pt/gnome-help/figures/topbar-screen-shared.svg
@@ -13679,7 +13649,7 @@ popd
 /usr/share/help/pt/gnome-help/hardware-problems-graphics.page
 /usr/share/help/pt/gnome-help/hardware.page
 /usr/share/help/pt/gnome-help/help-irc.page
-/usr/share/help/pt/gnome-help/help-mailing-list.page
+/usr/share/help/pt/gnome-help/help-matrix.page
 /usr/share/help/pt/gnome-help/index.page
 /usr/share/help/pt/gnome-help/keyboard-cursor-blink.page
 /usr/share/help/pt/gnome-help/keyboard-key-menu.page
@@ -13980,9 +13950,9 @@ popd
 /usr/share/help/pt_BR/gnome-help/figures/classic-topbar-network-wireless-acquiring.svg
 /usr/share/help/pt_BR/gnome-help/figures/classic-topbar-network-wireless-connected.svg
 /usr/share/help/pt_BR/gnome-help/figures/classic-topbar-network-wireless-no-route.svg
-/usr/share/help/pt_BR/gnome-help/figures/classic-topbar-network-wireless-strength-excellent.svg
-/usr/share/help/pt_BR/gnome-help/figures/classic-topbar-network-wireless-strength-none.svg
-/usr/share/help/pt_BR/gnome-help/figures/classic-topbar-network-wireless-strength.svg
+/usr/share/help/pt_BR/gnome-help/figures/classic-topbar-network-wireless-signal-excellent.svg
+/usr/share/help/pt_BR/gnome-help/figures/classic-topbar-network-wireless-signal-none.svg
+/usr/share/help/pt_BR/gnome-help/figures/classic-topbar-network-wireless-signal.svg
 /usr/share/help/pt_BR/gnome-help/figures/classic-topbar-night-light.svg
 /usr/share/help/pt_BR/gnome-help/figures/classic-topbar-pointer.svg
 /usr/share/help/pt_BR/gnome-help/figures/classic-topbar-screen-shared.svg
@@ -14023,7 +13993,6 @@ popd
 /usr/share/help/pt_BR/gnome-help/figures/net-wired-ethernet-diagram.svg
 /usr/share/help/pt_BR/gnome-help/figures/network-wired-symbolic.svg
 /usr/share/help/pt_BR/gnome-help/figures/network-wireless-disabled-symbolic.svg
-/usr/share/help/pt_BR/gnome-help/figures/preferences-desktop-accessibility-symbolic.svg
 /usr/share/help/pt_BR/gnome-help/figures/printing-select.png
 /usr/share/help/pt_BR/gnome-help/figures/ps-button.svg
 /usr/share/help/pt_BR/gnome-help/figures/ps-create.svg
@@ -14031,8 +14000,6 @@ popd
 /usr/share/help/pt_BR/gnome-help/figures/rotation-locked-symbolic.svg
 /usr/share/help/pt_BR/gnome-help/figures/screenshot-tool.png
 /usr/share/help/pt_BR/gnome-help/figures/shell-activities-dash.png
-/usr/share/help/pt_BR/gnome-help/figures/shell-appmenu-classic.png
-/usr/share/help/pt_BR/gnome-help/figures/shell-appmenu-shell.png
 /usr/share/help/pt_BR/gnome-help/figures/shell-appts-classic.png
 /usr/share/help/pt_BR/gnome-help/figures/shell-appts.png
 /usr/share/help/pt_BR/gnome-help/figures/shell-exit-classic-expanded.png
@@ -14082,9 +14049,9 @@ popd
 /usr/share/help/pt_BR/gnome-help/figures/topbar-network-wireless-acquiring.svg
 /usr/share/help/pt_BR/gnome-help/figures/topbar-network-wireless-connected.svg
 /usr/share/help/pt_BR/gnome-help/figures/topbar-network-wireless-no-route.svg
-/usr/share/help/pt_BR/gnome-help/figures/topbar-network-wireless-strength-excellent.svg
-/usr/share/help/pt_BR/gnome-help/figures/topbar-network-wireless-strength-none.svg
-/usr/share/help/pt_BR/gnome-help/figures/topbar-network-wireless-strength.svg
+/usr/share/help/pt_BR/gnome-help/figures/topbar-network-wireless-signal-excellent.svg
+/usr/share/help/pt_BR/gnome-help/figures/topbar-network-wireless-signal-none.svg
+/usr/share/help/pt_BR/gnome-help/figures/topbar-network-wireless-signal.svg
 /usr/share/help/pt_BR/gnome-help/figures/topbar-night-light.svg
 /usr/share/help/pt_BR/gnome-help/figures/topbar-pointer.svg
 /usr/share/help/pt_BR/gnome-help/figures/topbar-screen-shared.svg
@@ -14130,7 +14097,7 @@ popd
 /usr/share/help/pt_BR/gnome-help/hardware-problems-graphics.page
 /usr/share/help/pt_BR/gnome-help/hardware.page
 /usr/share/help/pt_BR/gnome-help/help-irc.page
-/usr/share/help/pt_BR/gnome-help/help-mailing-list.page
+/usr/share/help/pt_BR/gnome-help/help-matrix.page
 /usr/share/help/pt_BR/gnome-help/index.page
 /usr/share/help/pt_BR/gnome-help/keyboard-cursor-blink.page
 /usr/share/help/pt_BR/gnome-help/keyboard-key-menu.page
@@ -14488,9 +14455,9 @@ popd
 /usr/share/help/ro/gnome-help/figures/classic-topbar-network-wireless-acquiring.svg
 /usr/share/help/ro/gnome-help/figures/classic-topbar-network-wireless-connected.svg
 /usr/share/help/ro/gnome-help/figures/classic-topbar-network-wireless-no-route.svg
-/usr/share/help/ro/gnome-help/figures/classic-topbar-network-wireless-strength-excellent.svg
-/usr/share/help/ro/gnome-help/figures/classic-topbar-network-wireless-strength-none.svg
-/usr/share/help/ro/gnome-help/figures/classic-topbar-network-wireless-strength.svg
+/usr/share/help/ro/gnome-help/figures/classic-topbar-network-wireless-signal-excellent.svg
+/usr/share/help/ro/gnome-help/figures/classic-topbar-network-wireless-signal-none.svg
+/usr/share/help/ro/gnome-help/figures/classic-topbar-network-wireless-signal.svg
 /usr/share/help/ro/gnome-help/figures/classic-topbar-night-light.svg
 /usr/share/help/ro/gnome-help/figures/classic-topbar-pointer.svg
 /usr/share/help/ro/gnome-help/figures/classic-topbar-screen-shared.svg
@@ -14531,7 +14498,6 @@ popd
 /usr/share/help/ro/gnome-help/figures/net-wired-ethernet-diagram.svg
 /usr/share/help/ro/gnome-help/figures/network-wired-symbolic.svg
 /usr/share/help/ro/gnome-help/figures/network-wireless-disabled-symbolic.svg
-/usr/share/help/ro/gnome-help/figures/preferences-desktop-accessibility-symbolic.svg
 /usr/share/help/ro/gnome-help/figures/printing-select.png
 /usr/share/help/ro/gnome-help/figures/ps-button.svg
 /usr/share/help/ro/gnome-help/figures/ps-create.svg
@@ -14539,8 +14505,6 @@ popd
 /usr/share/help/ro/gnome-help/figures/rotation-locked-symbolic.svg
 /usr/share/help/ro/gnome-help/figures/screenshot-tool.png
 /usr/share/help/ro/gnome-help/figures/shell-activities-dash.png
-/usr/share/help/ro/gnome-help/figures/shell-appmenu-classic.png
-/usr/share/help/ro/gnome-help/figures/shell-appmenu-shell.png
 /usr/share/help/ro/gnome-help/figures/shell-appts-classic.png
 /usr/share/help/ro/gnome-help/figures/shell-appts.png
 /usr/share/help/ro/gnome-help/figures/shell-exit-classic-expanded.png
@@ -14590,9 +14554,9 @@ popd
 /usr/share/help/ro/gnome-help/figures/topbar-network-wireless-acquiring.svg
 /usr/share/help/ro/gnome-help/figures/topbar-network-wireless-connected.svg
 /usr/share/help/ro/gnome-help/figures/topbar-network-wireless-no-route.svg
-/usr/share/help/ro/gnome-help/figures/topbar-network-wireless-strength-excellent.svg
-/usr/share/help/ro/gnome-help/figures/topbar-network-wireless-strength-none.svg
-/usr/share/help/ro/gnome-help/figures/topbar-network-wireless-strength.svg
+/usr/share/help/ro/gnome-help/figures/topbar-network-wireless-signal-excellent.svg
+/usr/share/help/ro/gnome-help/figures/topbar-network-wireless-signal-none.svg
+/usr/share/help/ro/gnome-help/figures/topbar-network-wireless-signal.svg
 /usr/share/help/ro/gnome-help/figures/topbar-night-light.svg
 /usr/share/help/ro/gnome-help/figures/topbar-pointer.svg
 /usr/share/help/ro/gnome-help/figures/topbar-screen-shared.svg
@@ -14638,7 +14602,7 @@ popd
 /usr/share/help/ro/gnome-help/hardware-problems-graphics.page
 /usr/share/help/ro/gnome-help/hardware.page
 /usr/share/help/ro/gnome-help/help-irc.page
-/usr/share/help/ro/gnome-help/help-mailing-list.page
+/usr/share/help/ro/gnome-help/help-matrix.page
 /usr/share/help/ro/gnome-help/index.page
 /usr/share/help/ro/gnome-help/keyboard-cursor-blink.page
 /usr/share/help/ro/gnome-help/keyboard-key-menu.page
@@ -14939,9 +14903,9 @@ popd
 /usr/share/help/ru/gnome-help/figures/classic-topbar-network-wireless-acquiring.svg
 /usr/share/help/ru/gnome-help/figures/classic-topbar-network-wireless-connected.svg
 /usr/share/help/ru/gnome-help/figures/classic-topbar-network-wireless-no-route.svg
-/usr/share/help/ru/gnome-help/figures/classic-topbar-network-wireless-strength-excellent.svg
-/usr/share/help/ru/gnome-help/figures/classic-topbar-network-wireless-strength-none.svg
-/usr/share/help/ru/gnome-help/figures/classic-topbar-network-wireless-strength.svg
+/usr/share/help/ru/gnome-help/figures/classic-topbar-network-wireless-signal-excellent.svg
+/usr/share/help/ru/gnome-help/figures/classic-topbar-network-wireless-signal-none.svg
+/usr/share/help/ru/gnome-help/figures/classic-topbar-network-wireless-signal.svg
 /usr/share/help/ru/gnome-help/figures/classic-topbar-night-light.svg
 /usr/share/help/ru/gnome-help/figures/classic-topbar-pointer.svg
 /usr/share/help/ru/gnome-help/figures/classic-topbar-screen-shared.svg
@@ -14982,7 +14946,6 @@ popd
 /usr/share/help/ru/gnome-help/figures/net-wired-ethernet-diagram.svg
 /usr/share/help/ru/gnome-help/figures/network-wired-symbolic.svg
 /usr/share/help/ru/gnome-help/figures/network-wireless-disabled-symbolic.svg
-/usr/share/help/ru/gnome-help/figures/preferences-desktop-accessibility-symbolic.svg
 /usr/share/help/ru/gnome-help/figures/printing-select.png
 /usr/share/help/ru/gnome-help/figures/ps-button.svg
 /usr/share/help/ru/gnome-help/figures/ps-create.svg
@@ -14990,8 +14953,6 @@ popd
 /usr/share/help/ru/gnome-help/figures/rotation-locked-symbolic.svg
 /usr/share/help/ru/gnome-help/figures/screenshot-tool.png
 /usr/share/help/ru/gnome-help/figures/shell-activities-dash.png
-/usr/share/help/ru/gnome-help/figures/shell-appmenu-classic.png
-/usr/share/help/ru/gnome-help/figures/shell-appmenu-shell.png
 /usr/share/help/ru/gnome-help/figures/shell-appts-classic.png
 /usr/share/help/ru/gnome-help/figures/shell-appts.png
 /usr/share/help/ru/gnome-help/figures/shell-exit-classic-expanded.png
@@ -15041,9 +15002,9 @@ popd
 /usr/share/help/ru/gnome-help/figures/topbar-network-wireless-acquiring.svg
 /usr/share/help/ru/gnome-help/figures/topbar-network-wireless-connected.svg
 /usr/share/help/ru/gnome-help/figures/topbar-network-wireless-no-route.svg
-/usr/share/help/ru/gnome-help/figures/topbar-network-wireless-strength-excellent.svg
-/usr/share/help/ru/gnome-help/figures/topbar-network-wireless-strength-none.svg
-/usr/share/help/ru/gnome-help/figures/topbar-network-wireless-strength.svg
+/usr/share/help/ru/gnome-help/figures/topbar-network-wireless-signal-excellent.svg
+/usr/share/help/ru/gnome-help/figures/topbar-network-wireless-signal-none.svg
+/usr/share/help/ru/gnome-help/figures/topbar-network-wireless-signal.svg
 /usr/share/help/ru/gnome-help/figures/topbar-night-light.svg
 /usr/share/help/ru/gnome-help/figures/topbar-pointer.svg
 /usr/share/help/ru/gnome-help/figures/topbar-screen-shared.svg
@@ -15089,7 +15050,7 @@ popd
 /usr/share/help/ru/gnome-help/hardware-problems-graphics.page
 /usr/share/help/ru/gnome-help/hardware.page
 /usr/share/help/ru/gnome-help/help-irc.page
-/usr/share/help/ru/gnome-help/help-mailing-list.page
+/usr/share/help/ru/gnome-help/help-matrix.page
 /usr/share/help/ru/gnome-help/index.page
 /usr/share/help/ru/gnome-help/keyboard-cursor-blink.page
 /usr/share/help/ru/gnome-help/keyboard-key-menu.page
@@ -15447,9 +15408,9 @@ popd
 /usr/share/help/sl/gnome-help/figures/classic-topbar-network-wireless-acquiring.svg
 /usr/share/help/sl/gnome-help/figures/classic-topbar-network-wireless-connected.svg
 /usr/share/help/sl/gnome-help/figures/classic-topbar-network-wireless-no-route.svg
-/usr/share/help/sl/gnome-help/figures/classic-topbar-network-wireless-strength-excellent.svg
-/usr/share/help/sl/gnome-help/figures/classic-topbar-network-wireless-strength-none.svg
-/usr/share/help/sl/gnome-help/figures/classic-topbar-network-wireless-strength.svg
+/usr/share/help/sl/gnome-help/figures/classic-topbar-network-wireless-signal-excellent.svg
+/usr/share/help/sl/gnome-help/figures/classic-topbar-network-wireless-signal-none.svg
+/usr/share/help/sl/gnome-help/figures/classic-topbar-network-wireless-signal.svg
 /usr/share/help/sl/gnome-help/figures/classic-topbar-night-light.svg
 /usr/share/help/sl/gnome-help/figures/classic-topbar-pointer.svg
 /usr/share/help/sl/gnome-help/figures/classic-topbar-screen-shared.svg
@@ -15490,7 +15451,6 @@ popd
 /usr/share/help/sl/gnome-help/figures/net-wired-ethernet-diagram.svg
 /usr/share/help/sl/gnome-help/figures/network-wired-symbolic.svg
 /usr/share/help/sl/gnome-help/figures/network-wireless-disabled-symbolic.svg
-/usr/share/help/sl/gnome-help/figures/preferences-desktop-accessibility-symbolic.svg
 /usr/share/help/sl/gnome-help/figures/printing-select.png
 /usr/share/help/sl/gnome-help/figures/ps-button.svg
 /usr/share/help/sl/gnome-help/figures/ps-create.svg
@@ -15498,8 +15458,6 @@ popd
 /usr/share/help/sl/gnome-help/figures/rotation-locked-symbolic.svg
 /usr/share/help/sl/gnome-help/figures/screenshot-tool.png
 /usr/share/help/sl/gnome-help/figures/shell-activities-dash.png
-/usr/share/help/sl/gnome-help/figures/shell-appmenu-classic.png
-/usr/share/help/sl/gnome-help/figures/shell-appmenu-shell.png
 /usr/share/help/sl/gnome-help/figures/shell-appts-classic.png
 /usr/share/help/sl/gnome-help/figures/shell-appts.png
 /usr/share/help/sl/gnome-help/figures/shell-exit-classic-expanded.png
@@ -15549,9 +15507,9 @@ popd
 /usr/share/help/sl/gnome-help/figures/topbar-network-wireless-acquiring.svg
 /usr/share/help/sl/gnome-help/figures/topbar-network-wireless-connected.svg
 /usr/share/help/sl/gnome-help/figures/topbar-network-wireless-no-route.svg
-/usr/share/help/sl/gnome-help/figures/topbar-network-wireless-strength-excellent.svg
-/usr/share/help/sl/gnome-help/figures/topbar-network-wireless-strength-none.svg
-/usr/share/help/sl/gnome-help/figures/topbar-network-wireless-strength.svg
+/usr/share/help/sl/gnome-help/figures/topbar-network-wireless-signal-excellent.svg
+/usr/share/help/sl/gnome-help/figures/topbar-network-wireless-signal-none.svg
+/usr/share/help/sl/gnome-help/figures/topbar-network-wireless-signal.svg
 /usr/share/help/sl/gnome-help/figures/topbar-night-light.svg
 /usr/share/help/sl/gnome-help/figures/topbar-pointer.svg
 /usr/share/help/sl/gnome-help/figures/topbar-screen-shared.svg
@@ -15597,7 +15555,7 @@ popd
 /usr/share/help/sl/gnome-help/hardware-problems-graphics.page
 /usr/share/help/sl/gnome-help/hardware.page
 /usr/share/help/sl/gnome-help/help-irc.page
-/usr/share/help/sl/gnome-help/help-mailing-list.page
+/usr/share/help/sl/gnome-help/help-matrix.page
 /usr/share/help/sl/gnome-help/index.page
 /usr/share/help/sl/gnome-help/keyboard-cursor-blink.page
 /usr/share/help/sl/gnome-help/keyboard-key-menu.page
@@ -15898,9 +15856,9 @@ popd
 /usr/share/help/sr/gnome-help/figures/classic-topbar-network-wireless-acquiring.svg
 /usr/share/help/sr/gnome-help/figures/classic-topbar-network-wireless-connected.svg
 /usr/share/help/sr/gnome-help/figures/classic-topbar-network-wireless-no-route.svg
-/usr/share/help/sr/gnome-help/figures/classic-topbar-network-wireless-strength-excellent.svg
-/usr/share/help/sr/gnome-help/figures/classic-topbar-network-wireless-strength-none.svg
-/usr/share/help/sr/gnome-help/figures/classic-topbar-network-wireless-strength.svg
+/usr/share/help/sr/gnome-help/figures/classic-topbar-network-wireless-signal-excellent.svg
+/usr/share/help/sr/gnome-help/figures/classic-topbar-network-wireless-signal-none.svg
+/usr/share/help/sr/gnome-help/figures/classic-topbar-network-wireless-signal.svg
 /usr/share/help/sr/gnome-help/figures/classic-topbar-night-light.svg
 /usr/share/help/sr/gnome-help/figures/classic-topbar-pointer.svg
 /usr/share/help/sr/gnome-help/figures/classic-topbar-screen-shared.svg
@@ -15941,7 +15899,6 @@ popd
 /usr/share/help/sr/gnome-help/figures/net-wired-ethernet-diagram.svg
 /usr/share/help/sr/gnome-help/figures/network-wired-symbolic.svg
 /usr/share/help/sr/gnome-help/figures/network-wireless-disabled-symbolic.svg
-/usr/share/help/sr/gnome-help/figures/preferences-desktop-accessibility-symbolic.svg
 /usr/share/help/sr/gnome-help/figures/printing-select.png
 /usr/share/help/sr/gnome-help/figures/ps-button.svg
 /usr/share/help/sr/gnome-help/figures/ps-create.svg
@@ -15949,8 +15906,6 @@ popd
 /usr/share/help/sr/gnome-help/figures/rotation-locked-symbolic.svg
 /usr/share/help/sr/gnome-help/figures/screenshot-tool.png
 /usr/share/help/sr/gnome-help/figures/shell-activities-dash.png
-/usr/share/help/sr/gnome-help/figures/shell-appmenu-classic.png
-/usr/share/help/sr/gnome-help/figures/shell-appmenu-shell.png
 /usr/share/help/sr/gnome-help/figures/shell-appts-classic.png
 /usr/share/help/sr/gnome-help/figures/shell-appts.png
 /usr/share/help/sr/gnome-help/figures/shell-exit-classic-expanded.png
@@ -16000,9 +15955,9 @@ popd
 /usr/share/help/sr/gnome-help/figures/topbar-network-wireless-acquiring.svg
 /usr/share/help/sr/gnome-help/figures/topbar-network-wireless-connected.svg
 /usr/share/help/sr/gnome-help/figures/topbar-network-wireless-no-route.svg
-/usr/share/help/sr/gnome-help/figures/topbar-network-wireless-strength-excellent.svg
-/usr/share/help/sr/gnome-help/figures/topbar-network-wireless-strength-none.svg
-/usr/share/help/sr/gnome-help/figures/topbar-network-wireless-strength.svg
+/usr/share/help/sr/gnome-help/figures/topbar-network-wireless-signal-excellent.svg
+/usr/share/help/sr/gnome-help/figures/topbar-network-wireless-signal-none.svg
+/usr/share/help/sr/gnome-help/figures/topbar-network-wireless-signal.svg
 /usr/share/help/sr/gnome-help/figures/topbar-night-light.svg
 /usr/share/help/sr/gnome-help/figures/topbar-pointer.svg
 /usr/share/help/sr/gnome-help/figures/topbar-screen-shared.svg
@@ -16048,7 +16003,7 @@ popd
 /usr/share/help/sr/gnome-help/hardware-problems-graphics.page
 /usr/share/help/sr/gnome-help/hardware.page
 /usr/share/help/sr/gnome-help/help-irc.page
-/usr/share/help/sr/gnome-help/help-mailing-list.page
+/usr/share/help/sr/gnome-help/help-matrix.page
 /usr/share/help/sr/gnome-help/index.page
 /usr/share/help/sr/gnome-help/keyboard-cursor-blink.page
 /usr/share/help/sr/gnome-help/keyboard-key-menu.page
@@ -16349,9 +16304,9 @@ popd
 /usr/share/help/sr@latin/gnome-help/figures/classic-topbar-network-wireless-acquiring.svg
 /usr/share/help/sr@latin/gnome-help/figures/classic-topbar-network-wireless-connected.svg
 /usr/share/help/sr@latin/gnome-help/figures/classic-topbar-network-wireless-no-route.svg
-/usr/share/help/sr@latin/gnome-help/figures/classic-topbar-network-wireless-strength-excellent.svg
-/usr/share/help/sr@latin/gnome-help/figures/classic-topbar-network-wireless-strength-none.svg
-/usr/share/help/sr@latin/gnome-help/figures/classic-topbar-network-wireless-strength.svg
+/usr/share/help/sr@latin/gnome-help/figures/classic-topbar-network-wireless-signal-excellent.svg
+/usr/share/help/sr@latin/gnome-help/figures/classic-topbar-network-wireless-signal-none.svg
+/usr/share/help/sr@latin/gnome-help/figures/classic-topbar-network-wireless-signal.svg
 /usr/share/help/sr@latin/gnome-help/figures/classic-topbar-night-light.svg
 /usr/share/help/sr@latin/gnome-help/figures/classic-topbar-pointer.svg
 /usr/share/help/sr@latin/gnome-help/figures/classic-topbar-screen-shared.svg
@@ -16392,7 +16347,6 @@ popd
 /usr/share/help/sr@latin/gnome-help/figures/net-wired-ethernet-diagram.svg
 /usr/share/help/sr@latin/gnome-help/figures/network-wired-symbolic.svg
 /usr/share/help/sr@latin/gnome-help/figures/network-wireless-disabled-symbolic.svg
-/usr/share/help/sr@latin/gnome-help/figures/preferences-desktop-accessibility-symbolic.svg
 /usr/share/help/sr@latin/gnome-help/figures/printing-select.png
 /usr/share/help/sr@latin/gnome-help/figures/ps-button.svg
 /usr/share/help/sr@latin/gnome-help/figures/ps-create.svg
@@ -16400,8 +16354,6 @@ popd
 /usr/share/help/sr@latin/gnome-help/figures/rotation-locked-symbolic.svg
 /usr/share/help/sr@latin/gnome-help/figures/screenshot-tool.png
 /usr/share/help/sr@latin/gnome-help/figures/shell-activities-dash.png
-/usr/share/help/sr@latin/gnome-help/figures/shell-appmenu-classic.png
-/usr/share/help/sr@latin/gnome-help/figures/shell-appmenu-shell.png
 /usr/share/help/sr@latin/gnome-help/figures/shell-appts-classic.png
 /usr/share/help/sr@latin/gnome-help/figures/shell-appts.png
 /usr/share/help/sr@latin/gnome-help/figures/shell-exit-classic-expanded.png
@@ -16451,9 +16403,9 @@ popd
 /usr/share/help/sr@latin/gnome-help/figures/topbar-network-wireless-acquiring.svg
 /usr/share/help/sr@latin/gnome-help/figures/topbar-network-wireless-connected.svg
 /usr/share/help/sr@latin/gnome-help/figures/topbar-network-wireless-no-route.svg
-/usr/share/help/sr@latin/gnome-help/figures/topbar-network-wireless-strength-excellent.svg
-/usr/share/help/sr@latin/gnome-help/figures/topbar-network-wireless-strength-none.svg
-/usr/share/help/sr@latin/gnome-help/figures/topbar-network-wireless-strength.svg
+/usr/share/help/sr@latin/gnome-help/figures/topbar-network-wireless-signal-excellent.svg
+/usr/share/help/sr@latin/gnome-help/figures/topbar-network-wireless-signal-none.svg
+/usr/share/help/sr@latin/gnome-help/figures/topbar-network-wireless-signal.svg
 /usr/share/help/sr@latin/gnome-help/figures/topbar-night-light.svg
 /usr/share/help/sr@latin/gnome-help/figures/topbar-pointer.svg
 /usr/share/help/sr@latin/gnome-help/figures/topbar-screen-shared.svg
@@ -16499,7 +16451,7 @@ popd
 /usr/share/help/sr@latin/gnome-help/hardware-problems-graphics.page
 /usr/share/help/sr@latin/gnome-help/hardware.page
 /usr/share/help/sr@latin/gnome-help/help-irc.page
-/usr/share/help/sr@latin/gnome-help/help-mailing-list.page
+/usr/share/help/sr@latin/gnome-help/help-matrix.page
 /usr/share/help/sr@latin/gnome-help/index.page
 /usr/share/help/sr@latin/gnome-help/keyboard-cursor-blink.page
 /usr/share/help/sr@latin/gnome-help/keyboard-key-menu.page
@@ -16800,9 +16752,9 @@ popd
 /usr/share/help/sv/gnome-help/figures/classic-topbar-network-wireless-acquiring.svg
 /usr/share/help/sv/gnome-help/figures/classic-topbar-network-wireless-connected.svg
 /usr/share/help/sv/gnome-help/figures/classic-topbar-network-wireless-no-route.svg
-/usr/share/help/sv/gnome-help/figures/classic-topbar-network-wireless-strength-excellent.svg
-/usr/share/help/sv/gnome-help/figures/classic-topbar-network-wireless-strength-none.svg
-/usr/share/help/sv/gnome-help/figures/classic-topbar-network-wireless-strength.svg
+/usr/share/help/sv/gnome-help/figures/classic-topbar-network-wireless-signal-excellent.svg
+/usr/share/help/sv/gnome-help/figures/classic-topbar-network-wireless-signal-none.svg
+/usr/share/help/sv/gnome-help/figures/classic-topbar-network-wireless-signal.svg
 /usr/share/help/sv/gnome-help/figures/classic-topbar-night-light.svg
 /usr/share/help/sv/gnome-help/figures/classic-topbar-pointer.svg
 /usr/share/help/sv/gnome-help/figures/classic-topbar-screen-shared.svg
@@ -16843,7 +16795,6 @@ popd
 /usr/share/help/sv/gnome-help/figures/net-wired-ethernet-diagram.svg
 /usr/share/help/sv/gnome-help/figures/network-wired-symbolic.svg
 /usr/share/help/sv/gnome-help/figures/network-wireless-disabled-symbolic.svg
-/usr/share/help/sv/gnome-help/figures/preferences-desktop-accessibility-symbolic.svg
 /usr/share/help/sv/gnome-help/figures/printing-select.png
 /usr/share/help/sv/gnome-help/figures/ps-button.svg
 /usr/share/help/sv/gnome-help/figures/ps-create.svg
@@ -16851,8 +16802,6 @@ popd
 /usr/share/help/sv/gnome-help/figures/rotation-locked-symbolic.svg
 /usr/share/help/sv/gnome-help/figures/screenshot-tool.png
 /usr/share/help/sv/gnome-help/figures/shell-activities-dash.png
-/usr/share/help/sv/gnome-help/figures/shell-appmenu-classic.png
-/usr/share/help/sv/gnome-help/figures/shell-appmenu-shell.png
 /usr/share/help/sv/gnome-help/figures/shell-appts-classic.png
 /usr/share/help/sv/gnome-help/figures/shell-appts.png
 /usr/share/help/sv/gnome-help/figures/shell-exit-classic-expanded.png
@@ -16902,9 +16851,9 @@ popd
 /usr/share/help/sv/gnome-help/figures/topbar-network-wireless-acquiring.svg
 /usr/share/help/sv/gnome-help/figures/topbar-network-wireless-connected.svg
 /usr/share/help/sv/gnome-help/figures/topbar-network-wireless-no-route.svg
-/usr/share/help/sv/gnome-help/figures/topbar-network-wireless-strength-excellent.svg
-/usr/share/help/sv/gnome-help/figures/topbar-network-wireless-strength-none.svg
-/usr/share/help/sv/gnome-help/figures/topbar-network-wireless-strength.svg
+/usr/share/help/sv/gnome-help/figures/topbar-network-wireless-signal-excellent.svg
+/usr/share/help/sv/gnome-help/figures/topbar-network-wireless-signal-none.svg
+/usr/share/help/sv/gnome-help/figures/topbar-network-wireless-signal.svg
 /usr/share/help/sv/gnome-help/figures/topbar-night-light.svg
 /usr/share/help/sv/gnome-help/figures/topbar-pointer.svg
 /usr/share/help/sv/gnome-help/figures/topbar-screen-shared.svg
@@ -16950,7 +16899,7 @@ popd
 /usr/share/help/sv/gnome-help/hardware-problems-graphics.page
 /usr/share/help/sv/gnome-help/hardware.page
 /usr/share/help/sv/gnome-help/help-irc.page
-/usr/share/help/sv/gnome-help/help-mailing-list.page
+/usr/share/help/sv/gnome-help/help-matrix.page
 /usr/share/help/sv/gnome-help/index.page
 /usr/share/help/sv/gnome-help/keyboard-cursor-blink.page
 /usr/share/help/sv/gnome-help/keyboard-key-menu.page
@@ -17308,9 +17257,9 @@ popd
 /usr/share/help/ta/gnome-help/figures/classic-topbar-network-wireless-acquiring.svg
 /usr/share/help/ta/gnome-help/figures/classic-topbar-network-wireless-connected.svg
 /usr/share/help/ta/gnome-help/figures/classic-topbar-network-wireless-no-route.svg
-/usr/share/help/ta/gnome-help/figures/classic-topbar-network-wireless-strength-excellent.svg
-/usr/share/help/ta/gnome-help/figures/classic-topbar-network-wireless-strength-none.svg
-/usr/share/help/ta/gnome-help/figures/classic-topbar-network-wireless-strength.svg
+/usr/share/help/ta/gnome-help/figures/classic-topbar-network-wireless-signal-excellent.svg
+/usr/share/help/ta/gnome-help/figures/classic-topbar-network-wireless-signal-none.svg
+/usr/share/help/ta/gnome-help/figures/classic-topbar-network-wireless-signal.svg
 /usr/share/help/ta/gnome-help/figures/classic-topbar-night-light.svg
 /usr/share/help/ta/gnome-help/figures/classic-topbar-pointer.svg
 /usr/share/help/ta/gnome-help/figures/classic-topbar-screen-shared.svg
@@ -17351,7 +17300,6 @@ popd
 /usr/share/help/ta/gnome-help/figures/net-wired-ethernet-diagram.svg
 /usr/share/help/ta/gnome-help/figures/network-wired-symbolic.svg
 /usr/share/help/ta/gnome-help/figures/network-wireless-disabled-symbolic.svg
-/usr/share/help/ta/gnome-help/figures/preferences-desktop-accessibility-symbolic.svg
 /usr/share/help/ta/gnome-help/figures/printing-select.png
 /usr/share/help/ta/gnome-help/figures/ps-button.svg
 /usr/share/help/ta/gnome-help/figures/ps-create.svg
@@ -17359,8 +17307,6 @@ popd
 /usr/share/help/ta/gnome-help/figures/rotation-locked-symbolic.svg
 /usr/share/help/ta/gnome-help/figures/screenshot-tool.png
 /usr/share/help/ta/gnome-help/figures/shell-activities-dash.png
-/usr/share/help/ta/gnome-help/figures/shell-appmenu-classic.png
-/usr/share/help/ta/gnome-help/figures/shell-appmenu-shell.png
 /usr/share/help/ta/gnome-help/figures/shell-appts-classic.png
 /usr/share/help/ta/gnome-help/figures/shell-appts.png
 /usr/share/help/ta/gnome-help/figures/shell-exit-classic-expanded.png
@@ -17410,9 +17356,9 @@ popd
 /usr/share/help/ta/gnome-help/figures/topbar-network-wireless-acquiring.svg
 /usr/share/help/ta/gnome-help/figures/topbar-network-wireless-connected.svg
 /usr/share/help/ta/gnome-help/figures/topbar-network-wireless-no-route.svg
-/usr/share/help/ta/gnome-help/figures/topbar-network-wireless-strength-excellent.svg
-/usr/share/help/ta/gnome-help/figures/topbar-network-wireless-strength-none.svg
-/usr/share/help/ta/gnome-help/figures/topbar-network-wireless-strength.svg
+/usr/share/help/ta/gnome-help/figures/topbar-network-wireless-signal-excellent.svg
+/usr/share/help/ta/gnome-help/figures/topbar-network-wireless-signal-none.svg
+/usr/share/help/ta/gnome-help/figures/topbar-network-wireless-signal.svg
 /usr/share/help/ta/gnome-help/figures/topbar-night-light.svg
 /usr/share/help/ta/gnome-help/figures/topbar-pointer.svg
 /usr/share/help/ta/gnome-help/figures/topbar-screen-shared.svg
@@ -17458,7 +17404,7 @@ popd
 /usr/share/help/ta/gnome-help/hardware-problems-graphics.page
 /usr/share/help/ta/gnome-help/hardware.page
 /usr/share/help/ta/gnome-help/help-irc.page
-/usr/share/help/ta/gnome-help/help-mailing-list.page
+/usr/share/help/ta/gnome-help/help-matrix.page
 /usr/share/help/ta/gnome-help/index.page
 /usr/share/help/ta/gnome-help/keyboard-cursor-blink.page
 /usr/share/help/ta/gnome-help/keyboard-key-menu.page
@@ -17759,9 +17705,9 @@ popd
 /usr/share/help/te/gnome-help/figures/classic-topbar-network-wireless-acquiring.svg
 /usr/share/help/te/gnome-help/figures/classic-topbar-network-wireless-connected.svg
 /usr/share/help/te/gnome-help/figures/classic-topbar-network-wireless-no-route.svg
-/usr/share/help/te/gnome-help/figures/classic-topbar-network-wireless-strength-excellent.svg
-/usr/share/help/te/gnome-help/figures/classic-topbar-network-wireless-strength-none.svg
-/usr/share/help/te/gnome-help/figures/classic-topbar-network-wireless-strength.svg
+/usr/share/help/te/gnome-help/figures/classic-topbar-network-wireless-signal-excellent.svg
+/usr/share/help/te/gnome-help/figures/classic-topbar-network-wireless-signal-none.svg
+/usr/share/help/te/gnome-help/figures/classic-topbar-network-wireless-signal.svg
 /usr/share/help/te/gnome-help/figures/classic-topbar-night-light.svg
 /usr/share/help/te/gnome-help/figures/classic-topbar-pointer.svg
 /usr/share/help/te/gnome-help/figures/classic-topbar-screen-shared.svg
@@ -17802,7 +17748,6 @@ popd
 /usr/share/help/te/gnome-help/figures/net-wired-ethernet-diagram.svg
 /usr/share/help/te/gnome-help/figures/network-wired-symbolic.svg
 /usr/share/help/te/gnome-help/figures/network-wireless-disabled-symbolic.svg
-/usr/share/help/te/gnome-help/figures/preferences-desktop-accessibility-symbolic.svg
 /usr/share/help/te/gnome-help/figures/printing-select.png
 /usr/share/help/te/gnome-help/figures/ps-button.svg
 /usr/share/help/te/gnome-help/figures/ps-create.svg
@@ -17810,8 +17755,6 @@ popd
 /usr/share/help/te/gnome-help/figures/rotation-locked-symbolic.svg
 /usr/share/help/te/gnome-help/figures/screenshot-tool.png
 /usr/share/help/te/gnome-help/figures/shell-activities-dash.png
-/usr/share/help/te/gnome-help/figures/shell-appmenu-classic.png
-/usr/share/help/te/gnome-help/figures/shell-appmenu-shell.png
 /usr/share/help/te/gnome-help/figures/shell-appts-classic.png
 /usr/share/help/te/gnome-help/figures/shell-appts.png
 /usr/share/help/te/gnome-help/figures/shell-exit-classic-expanded.png
@@ -17861,9 +17804,9 @@ popd
 /usr/share/help/te/gnome-help/figures/topbar-network-wireless-acquiring.svg
 /usr/share/help/te/gnome-help/figures/topbar-network-wireless-connected.svg
 /usr/share/help/te/gnome-help/figures/topbar-network-wireless-no-route.svg
-/usr/share/help/te/gnome-help/figures/topbar-network-wireless-strength-excellent.svg
-/usr/share/help/te/gnome-help/figures/topbar-network-wireless-strength-none.svg
-/usr/share/help/te/gnome-help/figures/topbar-network-wireless-strength.svg
+/usr/share/help/te/gnome-help/figures/topbar-network-wireless-signal-excellent.svg
+/usr/share/help/te/gnome-help/figures/topbar-network-wireless-signal-none.svg
+/usr/share/help/te/gnome-help/figures/topbar-network-wireless-signal.svg
 /usr/share/help/te/gnome-help/figures/topbar-night-light.svg
 /usr/share/help/te/gnome-help/figures/topbar-pointer.svg
 /usr/share/help/te/gnome-help/figures/topbar-screen-shared.svg
@@ -17909,7 +17852,7 @@ popd
 /usr/share/help/te/gnome-help/hardware-problems-graphics.page
 /usr/share/help/te/gnome-help/hardware.page
 /usr/share/help/te/gnome-help/help-irc.page
-/usr/share/help/te/gnome-help/help-mailing-list.page
+/usr/share/help/te/gnome-help/help-matrix.page
 /usr/share/help/te/gnome-help/index.page
 /usr/share/help/te/gnome-help/keyboard-cursor-blink.page
 /usr/share/help/te/gnome-help/keyboard-key-menu.page
@@ -18210,9 +18153,9 @@ popd
 /usr/share/help/tr/gnome-help/figures/classic-topbar-network-wireless-acquiring.svg
 /usr/share/help/tr/gnome-help/figures/classic-topbar-network-wireless-connected.svg
 /usr/share/help/tr/gnome-help/figures/classic-topbar-network-wireless-no-route.svg
-/usr/share/help/tr/gnome-help/figures/classic-topbar-network-wireless-strength-excellent.svg
-/usr/share/help/tr/gnome-help/figures/classic-topbar-network-wireless-strength-none.svg
-/usr/share/help/tr/gnome-help/figures/classic-topbar-network-wireless-strength.svg
+/usr/share/help/tr/gnome-help/figures/classic-topbar-network-wireless-signal-excellent.svg
+/usr/share/help/tr/gnome-help/figures/classic-topbar-network-wireless-signal-none.svg
+/usr/share/help/tr/gnome-help/figures/classic-topbar-network-wireless-signal.svg
 /usr/share/help/tr/gnome-help/figures/classic-topbar-night-light.svg
 /usr/share/help/tr/gnome-help/figures/classic-topbar-pointer.svg
 /usr/share/help/tr/gnome-help/figures/classic-topbar-screen-shared.svg
@@ -18253,7 +18196,6 @@ popd
 /usr/share/help/tr/gnome-help/figures/net-wired-ethernet-diagram.svg
 /usr/share/help/tr/gnome-help/figures/network-wired-symbolic.svg
 /usr/share/help/tr/gnome-help/figures/network-wireless-disabled-symbolic.svg
-/usr/share/help/tr/gnome-help/figures/preferences-desktop-accessibility-symbolic.svg
 /usr/share/help/tr/gnome-help/figures/printing-select.png
 /usr/share/help/tr/gnome-help/figures/ps-button.svg
 /usr/share/help/tr/gnome-help/figures/ps-create.svg
@@ -18261,8 +18203,6 @@ popd
 /usr/share/help/tr/gnome-help/figures/rotation-locked-symbolic.svg
 /usr/share/help/tr/gnome-help/figures/screenshot-tool.png
 /usr/share/help/tr/gnome-help/figures/shell-activities-dash.png
-/usr/share/help/tr/gnome-help/figures/shell-appmenu-classic.png
-/usr/share/help/tr/gnome-help/figures/shell-appmenu-shell.png
 /usr/share/help/tr/gnome-help/figures/shell-appts-classic.png
 /usr/share/help/tr/gnome-help/figures/shell-appts.png
 /usr/share/help/tr/gnome-help/figures/shell-exit-classic-expanded.png
@@ -18312,9 +18252,9 @@ popd
 /usr/share/help/tr/gnome-help/figures/topbar-network-wireless-acquiring.svg
 /usr/share/help/tr/gnome-help/figures/topbar-network-wireless-connected.svg
 /usr/share/help/tr/gnome-help/figures/topbar-network-wireless-no-route.svg
-/usr/share/help/tr/gnome-help/figures/topbar-network-wireless-strength-excellent.svg
-/usr/share/help/tr/gnome-help/figures/topbar-network-wireless-strength-none.svg
-/usr/share/help/tr/gnome-help/figures/topbar-network-wireless-strength.svg
+/usr/share/help/tr/gnome-help/figures/topbar-network-wireless-signal-excellent.svg
+/usr/share/help/tr/gnome-help/figures/topbar-network-wireless-signal-none.svg
+/usr/share/help/tr/gnome-help/figures/topbar-network-wireless-signal.svg
 /usr/share/help/tr/gnome-help/figures/topbar-night-light.svg
 /usr/share/help/tr/gnome-help/figures/topbar-pointer.svg
 /usr/share/help/tr/gnome-help/figures/topbar-screen-shared.svg
@@ -18360,7 +18300,7 @@ popd
 /usr/share/help/tr/gnome-help/hardware-problems-graphics.page
 /usr/share/help/tr/gnome-help/hardware.page
 /usr/share/help/tr/gnome-help/help-irc.page
-/usr/share/help/tr/gnome-help/help-mailing-list.page
+/usr/share/help/tr/gnome-help/help-matrix.page
 /usr/share/help/tr/gnome-help/index.page
 /usr/share/help/tr/gnome-help/keyboard-cursor-blink.page
 /usr/share/help/tr/gnome-help/keyboard-key-menu.page
@@ -18718,9 +18658,9 @@ popd
 /usr/share/help/uk/gnome-help/figures/classic-topbar-network-wireless-acquiring.svg
 /usr/share/help/uk/gnome-help/figures/classic-topbar-network-wireless-connected.svg
 /usr/share/help/uk/gnome-help/figures/classic-topbar-network-wireless-no-route.svg
-/usr/share/help/uk/gnome-help/figures/classic-topbar-network-wireless-strength-excellent.svg
-/usr/share/help/uk/gnome-help/figures/classic-topbar-network-wireless-strength-none.svg
-/usr/share/help/uk/gnome-help/figures/classic-topbar-network-wireless-strength.svg
+/usr/share/help/uk/gnome-help/figures/classic-topbar-network-wireless-signal-excellent.svg
+/usr/share/help/uk/gnome-help/figures/classic-topbar-network-wireless-signal-none.svg
+/usr/share/help/uk/gnome-help/figures/classic-topbar-network-wireless-signal.svg
 /usr/share/help/uk/gnome-help/figures/classic-topbar-night-light.svg
 /usr/share/help/uk/gnome-help/figures/classic-topbar-pointer.svg
 /usr/share/help/uk/gnome-help/figures/classic-topbar-screen-shared.svg
@@ -18761,7 +18701,6 @@ popd
 /usr/share/help/uk/gnome-help/figures/net-wired-ethernet-diagram.svg
 /usr/share/help/uk/gnome-help/figures/network-wired-symbolic.svg
 /usr/share/help/uk/gnome-help/figures/network-wireless-disabled-symbolic.svg
-/usr/share/help/uk/gnome-help/figures/preferences-desktop-accessibility-symbolic.svg
 /usr/share/help/uk/gnome-help/figures/printing-select.png
 /usr/share/help/uk/gnome-help/figures/ps-button.svg
 /usr/share/help/uk/gnome-help/figures/ps-create.svg
@@ -18769,8 +18708,6 @@ popd
 /usr/share/help/uk/gnome-help/figures/rotation-locked-symbolic.svg
 /usr/share/help/uk/gnome-help/figures/screenshot-tool.png
 /usr/share/help/uk/gnome-help/figures/shell-activities-dash.png
-/usr/share/help/uk/gnome-help/figures/shell-appmenu-classic.png
-/usr/share/help/uk/gnome-help/figures/shell-appmenu-shell.png
 /usr/share/help/uk/gnome-help/figures/shell-appts-classic.png
 /usr/share/help/uk/gnome-help/figures/shell-appts.png
 /usr/share/help/uk/gnome-help/figures/shell-exit-classic-expanded.png
@@ -18820,9 +18757,9 @@ popd
 /usr/share/help/uk/gnome-help/figures/topbar-network-wireless-acquiring.svg
 /usr/share/help/uk/gnome-help/figures/topbar-network-wireless-connected.svg
 /usr/share/help/uk/gnome-help/figures/topbar-network-wireless-no-route.svg
-/usr/share/help/uk/gnome-help/figures/topbar-network-wireless-strength-excellent.svg
-/usr/share/help/uk/gnome-help/figures/topbar-network-wireless-strength-none.svg
-/usr/share/help/uk/gnome-help/figures/topbar-network-wireless-strength.svg
+/usr/share/help/uk/gnome-help/figures/topbar-network-wireless-signal-excellent.svg
+/usr/share/help/uk/gnome-help/figures/topbar-network-wireless-signal-none.svg
+/usr/share/help/uk/gnome-help/figures/topbar-network-wireless-signal.svg
 /usr/share/help/uk/gnome-help/figures/topbar-night-light.svg
 /usr/share/help/uk/gnome-help/figures/topbar-pointer.svg
 /usr/share/help/uk/gnome-help/figures/topbar-screen-shared.svg
@@ -18868,7 +18805,7 @@ popd
 /usr/share/help/uk/gnome-help/hardware-problems-graphics.page
 /usr/share/help/uk/gnome-help/hardware.page
 /usr/share/help/uk/gnome-help/help-irc.page
-/usr/share/help/uk/gnome-help/help-mailing-list.page
+/usr/share/help/uk/gnome-help/help-matrix.page
 /usr/share/help/uk/gnome-help/index.page
 /usr/share/help/uk/gnome-help/keyboard-cursor-blink.page
 /usr/share/help/uk/gnome-help/keyboard-key-menu.page
@@ -19226,9 +19163,9 @@ popd
 /usr/share/help/vi/gnome-help/figures/classic-topbar-network-wireless-acquiring.svg
 /usr/share/help/vi/gnome-help/figures/classic-topbar-network-wireless-connected.svg
 /usr/share/help/vi/gnome-help/figures/classic-topbar-network-wireless-no-route.svg
-/usr/share/help/vi/gnome-help/figures/classic-topbar-network-wireless-strength-excellent.svg
-/usr/share/help/vi/gnome-help/figures/classic-topbar-network-wireless-strength-none.svg
-/usr/share/help/vi/gnome-help/figures/classic-topbar-network-wireless-strength.svg
+/usr/share/help/vi/gnome-help/figures/classic-topbar-network-wireless-signal-excellent.svg
+/usr/share/help/vi/gnome-help/figures/classic-topbar-network-wireless-signal-none.svg
+/usr/share/help/vi/gnome-help/figures/classic-topbar-network-wireless-signal.svg
 /usr/share/help/vi/gnome-help/figures/classic-topbar-night-light.svg
 /usr/share/help/vi/gnome-help/figures/classic-topbar-pointer.svg
 /usr/share/help/vi/gnome-help/figures/classic-topbar-screen-shared.svg
@@ -19269,7 +19206,6 @@ popd
 /usr/share/help/vi/gnome-help/figures/net-wired-ethernet-diagram.svg
 /usr/share/help/vi/gnome-help/figures/network-wired-symbolic.svg
 /usr/share/help/vi/gnome-help/figures/network-wireless-disabled-symbolic.svg
-/usr/share/help/vi/gnome-help/figures/preferences-desktop-accessibility-symbolic.svg
 /usr/share/help/vi/gnome-help/figures/printing-select.png
 /usr/share/help/vi/gnome-help/figures/ps-button.svg
 /usr/share/help/vi/gnome-help/figures/ps-create.svg
@@ -19277,8 +19213,6 @@ popd
 /usr/share/help/vi/gnome-help/figures/rotation-locked-symbolic.svg
 /usr/share/help/vi/gnome-help/figures/screenshot-tool.png
 /usr/share/help/vi/gnome-help/figures/shell-activities-dash.png
-/usr/share/help/vi/gnome-help/figures/shell-appmenu-classic.png
-/usr/share/help/vi/gnome-help/figures/shell-appmenu-shell.png
 /usr/share/help/vi/gnome-help/figures/shell-appts-classic.png
 /usr/share/help/vi/gnome-help/figures/shell-appts.png
 /usr/share/help/vi/gnome-help/figures/shell-exit-classic-expanded.png
@@ -19328,9 +19262,9 @@ popd
 /usr/share/help/vi/gnome-help/figures/topbar-network-wireless-acquiring.svg
 /usr/share/help/vi/gnome-help/figures/topbar-network-wireless-connected.svg
 /usr/share/help/vi/gnome-help/figures/topbar-network-wireless-no-route.svg
-/usr/share/help/vi/gnome-help/figures/topbar-network-wireless-strength-excellent.svg
-/usr/share/help/vi/gnome-help/figures/topbar-network-wireless-strength-none.svg
-/usr/share/help/vi/gnome-help/figures/topbar-network-wireless-strength.svg
+/usr/share/help/vi/gnome-help/figures/topbar-network-wireless-signal-excellent.svg
+/usr/share/help/vi/gnome-help/figures/topbar-network-wireless-signal-none.svg
+/usr/share/help/vi/gnome-help/figures/topbar-network-wireless-signal.svg
 /usr/share/help/vi/gnome-help/figures/topbar-night-light.svg
 /usr/share/help/vi/gnome-help/figures/topbar-pointer.svg
 /usr/share/help/vi/gnome-help/figures/topbar-screen-shared.svg
@@ -19376,7 +19310,7 @@ popd
 /usr/share/help/vi/gnome-help/hardware-problems-graphics.page
 /usr/share/help/vi/gnome-help/hardware.page
 /usr/share/help/vi/gnome-help/help-irc.page
-/usr/share/help/vi/gnome-help/help-mailing-list.page
+/usr/share/help/vi/gnome-help/help-matrix.page
 /usr/share/help/vi/gnome-help/index.page
 /usr/share/help/vi/gnome-help/keyboard-cursor-blink.page
 /usr/share/help/vi/gnome-help/keyboard-key-menu.page
@@ -19677,9 +19611,9 @@ popd
 /usr/share/help/zh_CN/gnome-help/figures/classic-topbar-network-wireless-acquiring.svg
 /usr/share/help/zh_CN/gnome-help/figures/classic-topbar-network-wireless-connected.svg
 /usr/share/help/zh_CN/gnome-help/figures/classic-topbar-network-wireless-no-route.svg
-/usr/share/help/zh_CN/gnome-help/figures/classic-topbar-network-wireless-strength-excellent.svg
-/usr/share/help/zh_CN/gnome-help/figures/classic-topbar-network-wireless-strength-none.svg
-/usr/share/help/zh_CN/gnome-help/figures/classic-topbar-network-wireless-strength.svg
+/usr/share/help/zh_CN/gnome-help/figures/classic-topbar-network-wireless-signal-excellent.svg
+/usr/share/help/zh_CN/gnome-help/figures/classic-topbar-network-wireless-signal-none.svg
+/usr/share/help/zh_CN/gnome-help/figures/classic-topbar-network-wireless-signal.svg
 /usr/share/help/zh_CN/gnome-help/figures/classic-topbar-night-light.svg
 /usr/share/help/zh_CN/gnome-help/figures/classic-topbar-pointer.svg
 /usr/share/help/zh_CN/gnome-help/figures/classic-topbar-screen-shared.svg
@@ -19720,7 +19654,6 @@ popd
 /usr/share/help/zh_CN/gnome-help/figures/net-wired-ethernet-diagram.svg
 /usr/share/help/zh_CN/gnome-help/figures/network-wired-symbolic.svg
 /usr/share/help/zh_CN/gnome-help/figures/network-wireless-disabled-symbolic.svg
-/usr/share/help/zh_CN/gnome-help/figures/preferences-desktop-accessibility-symbolic.svg
 /usr/share/help/zh_CN/gnome-help/figures/printing-select.png
 /usr/share/help/zh_CN/gnome-help/figures/ps-button.svg
 /usr/share/help/zh_CN/gnome-help/figures/ps-create.svg
@@ -19728,8 +19661,6 @@ popd
 /usr/share/help/zh_CN/gnome-help/figures/rotation-locked-symbolic.svg
 /usr/share/help/zh_CN/gnome-help/figures/screenshot-tool.png
 /usr/share/help/zh_CN/gnome-help/figures/shell-activities-dash.png
-/usr/share/help/zh_CN/gnome-help/figures/shell-appmenu-classic.png
-/usr/share/help/zh_CN/gnome-help/figures/shell-appmenu-shell.png
 /usr/share/help/zh_CN/gnome-help/figures/shell-appts-classic.png
 /usr/share/help/zh_CN/gnome-help/figures/shell-appts.png
 /usr/share/help/zh_CN/gnome-help/figures/shell-exit-classic-expanded.png
@@ -19779,9 +19710,9 @@ popd
 /usr/share/help/zh_CN/gnome-help/figures/topbar-network-wireless-acquiring.svg
 /usr/share/help/zh_CN/gnome-help/figures/topbar-network-wireless-connected.svg
 /usr/share/help/zh_CN/gnome-help/figures/topbar-network-wireless-no-route.svg
-/usr/share/help/zh_CN/gnome-help/figures/topbar-network-wireless-strength-excellent.svg
-/usr/share/help/zh_CN/gnome-help/figures/topbar-network-wireless-strength-none.svg
-/usr/share/help/zh_CN/gnome-help/figures/topbar-network-wireless-strength.svg
+/usr/share/help/zh_CN/gnome-help/figures/topbar-network-wireless-signal-excellent.svg
+/usr/share/help/zh_CN/gnome-help/figures/topbar-network-wireless-signal-none.svg
+/usr/share/help/zh_CN/gnome-help/figures/topbar-network-wireless-signal.svg
 /usr/share/help/zh_CN/gnome-help/figures/topbar-night-light.svg
 /usr/share/help/zh_CN/gnome-help/figures/topbar-pointer.svg
 /usr/share/help/zh_CN/gnome-help/figures/topbar-screen-shared.svg
@@ -19827,7 +19758,7 @@ popd
 /usr/share/help/zh_CN/gnome-help/hardware-problems-graphics.page
 /usr/share/help/zh_CN/gnome-help/hardware.page
 /usr/share/help/zh_CN/gnome-help/help-irc.page
-/usr/share/help/zh_CN/gnome-help/help-mailing-list.page
+/usr/share/help/zh_CN/gnome-help/help-matrix.page
 /usr/share/help/zh_CN/gnome-help/index.page
 /usr/share/help/zh_CN/gnome-help/keyboard-cursor-blink.page
 /usr/share/help/zh_CN/gnome-help/keyboard-key-menu.page
