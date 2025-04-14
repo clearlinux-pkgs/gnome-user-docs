@@ -1,4 +1,14 @@
-47.5
+48.1
+====
+* Note: The previous version 48.0 was not released due to a missing build job
+  configuration (#270).
+* Updated translations:
+  ca        (Jordi Mas)
+  es        (Jordi Mas)
+  eu        (Asier Saratsua Garmendia)
+  gl        (Petr Kovar)
+
+48.0
 ====
 * Updates to GNOME Help (Philip Withnall)
 * Updated translations:
@@ -6,7 +16,7 @@
   fa        (Danial Behzadi)
   fi        (Jiri Grönroos)
   fr        (Irénée THIRION)
-  gl        (Petr Kovar, Fran Dieguez)
+  gl        (Fran Dieguez)
   hu        (Balázs Úr)
   id        (Andika Triwidada)
   pt_BR     (Rafael Fontenelle)
